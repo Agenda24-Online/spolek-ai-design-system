@@ -1,0 +1,11 @@
+{
+  "name": "spolek-ai-operating-system",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/web"],
+  "scripts": {
+    "dev": "npm run dev --workspace @saos/web",
+    "build": "npm run build --workspace @saos/web",
+    "check": "npm run check --workspace @saos/web"
+  }
+}
