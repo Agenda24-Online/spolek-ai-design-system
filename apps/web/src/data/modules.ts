@@ -17,7 +17,7 @@ export const modules: SaosModule[] = [
   { id: 'workflow', label: 'Workflow', description: 'Opakovatelné pracovní postupy a kontrolní body.', href: '/workflow/', status: 'active' },
   { id: 'marketing', label: 'Marketing', description: 'Kampaně, obsah, kanály a distribuční pravidla.', href: '/marketing/', status: 'active' },
   { id: 'knowledge-base', label: 'Knowledge Base', description: 'Návody, poznatky, dokumentace a firemní know-how.', href: '/knowledge-base/', status: 'active' },
-  { id: 'decision-log', label: 'Decision Log', description: 'Důležitá rozhodnutí, důvody a jejich dopady.', href: '/decision-log/', status: 'planned' },
-  { id: 'future-ideas', label: 'Future Ideas', description: 'Zásobník prověřovaných nápadů a příležitostí.', href: '/future-ideas/', status: 'planned' },
-  { id: 'asset-library', label: 'Asset Library', description: 'Loga, obrazy, SVG, šablony a jejich metadata.', href: '/asset-library/', status: 'planned' }
+  { id: 'decision-log', label: 'Decision Log', description: 'Důležitá rozhodnutí, důvody a jejich dopady.', href: '/decision-log/', status: 'active' },
+  { id: 'future-ideas', label: 'Future Ideas', description: 'Zásobník prověřovaných nápadů a příležitostí.', href: '/future-ideas/', status: 'active' },
+  { id: 'asset-library', label: 'Asset Library', description: 'Loga, obrazy, SVG, šablony a jejich metadata.', href: '/asset-library/', status: 'active' }
 ];

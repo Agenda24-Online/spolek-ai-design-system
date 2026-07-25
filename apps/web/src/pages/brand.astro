@@ -1,0 +1,42 @@
+---
+import SaosLayout from '../layouts/SaosLayout.astro';
+const base = import.meta.env.BASE_URL;
+const logo = `${base}logos/spolek-ai-logo.svg`;
+---
+<SaosLayout title="Brand Manual" description="Vizuální a komunikační identita značky Spolek.ai.">
+  <section class="module-hero">
+    <p class="eyebrow">Vizuální identita</p>
+    <h1>Brand Manual</h1>
+    <p class="module-intro">Značka Spolek.ai kombinuje energii, lidskost a praktickou technologickou kompetenci. Její charakter je svěží a současný, ne chladný, korporátní ani kyberpunkový.</p>
+  </section>
+
+  <section class="story-section">
+    <div class="story-heading"><p class="eyebrow">Originální značka</p><h2>Logo Spolek.ai</h2><p>Logo se používá bez deformací, přebarvování jednotlivých částí a bez nahrazování symbolem nebo iniciálou.</p></div>
+    <div class="content-grid">
+      <div class="logo-panel"><img src={logo} alt="Originální oranžové logo Spolek.ai" /></div>
+      <div class="logo-panel dark"><img src={logo} alt="Světlá varianta loga Spolek.ai na tmavém pozadí" /></div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <div class="story-heading"><p class="eyebrow">Barevný systém</p><h2>Oranžová je hlavní poznávací znak</h2><p>Paleta vychází přímo z původního loga: energická oranžová, její hlubší odstín, teplý papír a téměř černý inkoust.</p></div>
+    <div class="swatch-grid">
+      <div class="brand-swatch" style="background:#f15a00">Primary Orange<br />#F15A00</div>
+      <div class="brand-swatch" style="background:#a93600">Deep Orange<br />#A93600</div>
+      <div class="brand-swatch" style="background:#15171d">Ink<br />#15171D</div>
+      <div class="brand-swatch light" style="background:#fffdf9">Warm Paper<br />#FFFDF9</div>
+      <div class="brand-swatch light" style="background:#fff1e7">Soft Orange<br />#FFF1E7</div>
+      <div class="brand-swatch light" style="background:#ffffff">Surface<br />#FFFFFF</div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <p class="eyebrow">Charakter komunikace</p>
+    <div class="content-grid">
+      <article class="content-card"><h2>Praktický</h2><p>Technologie se vysvětlují přes konkrétní užitek, reálné procesy a srozumitelné výsledky.</p></article>
+      <article class="content-card"><h2>Lidský</h2><p>Značka nemluví jako anonymní korporace. Je otevřená, přímá a respektuje různou úroveň zkušeností.</p></article>
+      <article class="content-card"><h2>Důvěryhodný</h2><p>Tvrzení jsou ověřitelná. Rozlišujeme fakta, doporučení, experimenty a budoucí vize.</p></article>
+      <article class="content-card"><h2>Odvážný</h2><p>Spolek.ai se nebojí nových způsobů práce, ale neprodává prázdný technologický hype.</p></article>
+    </div>
+  </section>
+</SaosLayout>
