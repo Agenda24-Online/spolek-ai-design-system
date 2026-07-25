@@ -1,0 +1,32 @@
+---
+const title = 'Oprava odkazu';
+---
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <title>{title} — Spolek.ai</title>
+    <script is:inline>
+      (() => {
+        const project = '/spolek-ai-design-system';
+        const path = window.location.pathname;
+        const marker = `${project}`;
+
+        if (path.startsWith(marker) && !path.startsWith(`${marker}/`)) {
+          const modulePath = path.slice(marker.length).replace(/^\/+/, '');
+          window.location.replace(
+            `${marker}/${modulePath}${window.location.search}${window.location.hash}`,
+          );
+          return;
+        }
+
+        window.location.replace(`${marker}/`);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Opravuji odkaz a otevírám Spolek.ai Operating System…</p>
+  </body>
+</html>
