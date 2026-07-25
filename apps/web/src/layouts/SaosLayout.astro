@@ -10,6 +10,7 @@ interface Props {
 const { title, description = 'Spolek.ai Operating System' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const withBase = (href: string) => `${base}${href.replace(/^\//, '')}`;
+const currentPath = Astro.url.pathname;
 ---
 <!doctype html>
 <html lang="cs">
@@ -23,18 +24,17 @@ const withBase = (href: string) => `${base}${href.replace(/^\//, '')}`;
     <div class="shell">
       <aside class="sidebar">
         <a class="brand" href={withBase('/')}>
-          <span class="brand-mark">S</span>
-          <span><strong>Spolek.ai</strong><small>Operating System</small></span>
+          <img src={withBase('/logos/spolek-ai-logo.svg')} alt="Spolek.ai" />
+          <small>Operating System</small>
         </a>
         <nav aria-label="Hlavní navigace">
           {modules.map((item) => (
-            <a href={withBase(item.href)}>
+            <a class:list={{ active: currentPath === withBase(item.href) }} href={withBase(item.href)}>
               <span>{item.label}</span>
-              {item.status === 'planned' && <small>plán</small>}
             </a>
           ))}
         </nav>
-        <p class="release">SAOS 0.1 · M1</p>
+        <p class="release">Spolek.ai · živý pracovní systém</p>
       </aside>
       <div class="workspace">
         <header class="topbar">
