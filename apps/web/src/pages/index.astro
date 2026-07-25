@@ -8,6 +8,8 @@ const home = entries.find((entry) => entry.data.id === 'saos-home');
 if (!home) throw new Error('Chybí obsah saos-home.');
 const { Content } = await render(home);
 const active = modules.filter((item) => item.status === 'active').length;
+const base = import.meta.env.BASE_URL;
+const withBase = (href: string) => `${base}${href.replace(/^\//, '')}`;
 ---
 <SaosLayout title={home.data.title}>
   <section class="hero">
@@ -27,11 +29,11 @@ const active = modules.filter((item) => item.status === 'active').length;
         <p class="eyebrow">Struktura SAOS</p>
         <h2 id="modules-heading">Vše podstatné na jednom místě</h2>
       </div>
-      <p>Obsah se bude doplňovat postupně. Modul označený „plán“ je připravený ve struktuře, ale zatím nemá schválený obsah.</p>
+      <p>Začněte částí „O projektu“, kde je vysvětlený smysl, fungování a obchodní model celého systému. Ostatní moduly uchovávají jeho konkrétní pravidla a aktiva.</p>
     </div>
     <div class="module-grid">
       {modules.map((item, index) => (
-        <a class:list={['module-card', { planned: item.status === 'planned' }]} href={item.status === 'active' ? item.href : undefined} aria-disabled={item.status === 'planned'}>
+        <a class:list={['module-card', { planned: item.status === 'planned' }]} href={item.status === 'active' ? withBase(item.href) : undefined} aria-disabled={item.status === 'planned'}>
           <span class="number">{String(index + 1).padStart(2, '0')}</span>
           <h3>{item.label}</h3>
           <p>{item.description}</p>
