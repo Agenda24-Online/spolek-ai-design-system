@@ -1,0 +1,12 @@
+1. V GitHubu musí být vybraná větev develop.
+2. Klikněte Add file → Upload files.
+3. Rozbalte tento ZIP.
+4. Nahrajte obsah rozbalené složky:
+   index.html
+   data/navigation.json
+   assets-library/index.html
+   decisions/index.html
+   changelog/index.html
+5. Potvrďte přepsání index.html a navigation.json.
+6. Commit message: SAOS 2.0 foundation
+7. Commit přímo do větve develop.

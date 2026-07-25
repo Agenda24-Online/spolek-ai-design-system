@@ -35,6 +35,21 @@
     "group": "Hlavní"
   },
   {
+    "label": "Assets Library",
+    "href": "assets-library/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Decisions",
+    "href": "decisions/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Changelog",
+    "href": "changelog/",
+    "group": "Hlavní"
+  },
+  {
     "label": "Laboratoř",
     "href": "laboratory/",
     "group": "Hlavní"
