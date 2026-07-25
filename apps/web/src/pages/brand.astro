@@ -1,6 +1,6 @@
 ---
 import SaosLayout from '../layouts/SaosLayout.astro';
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const logo = `${base}logos/spolek-ai-logo.svg`;
 ---
 <SaosLayout title="Brand Manual" description="Vizuální a komunikační identita značky Spolek.ai.">
