@@ -1,9 +1,10 @@
 ---
-import { getEntry, render } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import SaosLayout from '../layouts/SaosLayout.astro';
 import { modules } from '../data/modules';
 
-const home = await getEntry('public', 'home');
+const entries = await getCollection('public');
+const home = entries.find((entry) => entry.data.id === 'saos-home');
 if (!home) throw new Error('Chybí obsah saos-home.');
 const { Content } = await render(home);
 const active = modules.filter((item) => item.status === 'active').length;
