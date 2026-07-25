@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Dashboard",
+    "href": "index.html",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Brand",
+    "href": "brand/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Design System",
+    "href": "design-system/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "AI Team",
+    "href": "ai-team/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Business OS",
+    "href": "business-os/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Marketing",
+    "href": "marketing/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Knowledge Base",
+    "href": "knowledge-base/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Laboratoř",
+    "href": "laboratory/",
+    "group": "Hlavní"
+  },
+  {
+    "label": "Barvy",
+    "href": "colors/",
+    "group": "Design"
+  },
+  {
+    "label": "Typografie",
+    "href": "typography/",
+    "group": "Design"
+  },
+  {
+    "label": "Avataři",
+    "href": "avatars/",
+    "group": "Design"
+  },
+  {
+    "label": "Motion",
+    "href": "motion/",
+    "group": "Design"
+  },
+  {
+    "label": "Business model",
+    "href": "business-model/",
+    "group": "Byznys"
+  },
+  {
+    "label": "Workflow",
+    "href": "workflow/",
+    "group": "Byznys"
+  },
+  {
+    "label": "Design tokeny",
+    "href": "design-tokens/",
+    "group": "Vývoj"
+  },
+  {
+    "label": "UI komponenty",
+    "href": "ui-components/",
+    "group": "Vývoj"
+  }
+]

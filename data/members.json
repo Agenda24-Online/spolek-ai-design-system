@@ -1,0 +1,30 @@
+[
+  {
+    "name": "SPIKE",
+    "role": "AI Auditor"
+  },
+  {
+    "name": "ROOT",
+    "role": "AI Diagnostik"
+  },
+  {
+    "name": "NEXUS",
+    "role": "AI Strateg"
+  },
+  {
+    "name": "PIXIE",
+    "role": "AI Produkce"
+  },
+  {
+    "name": "WAVE",
+    "role": "AI Distribuce"
+  },
+  {
+    "name": "ORBIT",
+    "role": "AI Analytik"
+  },
+  {
+    "name": "MAX",
+    "role": "AI Optimalizátor"
+  }
+]

@@ -1,0 +1,6 @@
+1. ZIP rozbalte.
+2. Otevřete složku spolek-ai-design-system-v1.0.
+3. Označte VŠECHEN obsah uvnitř.
+4. Přetáhněte obsah do GitHub upload stránky.
+5. Commit message: Initial Spolek.ai Design System v1.0
+6. Klikněte Commit changes.
