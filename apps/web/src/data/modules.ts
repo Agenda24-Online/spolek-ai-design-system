@@ -9,6 +9,7 @@ export interface SaosModule {
 }
 
 export const modules: SaosModule[] = [
+  { id: 'project', label: 'O projektu', description: 'Smysl, charakter, architektura, fungování a obchodní model SAOS.', href: '/project/', status: 'active' },
   { id: 'brand', label: 'Brand Manual', description: 'Identita, logo, barvy, typografie a jazyk značky.', href: '/brand/', status: 'active' },
   { id: 'design-system', label: 'Design System', description: 'Tokeny, komponenty a pravidla vizuálního systému.', href: '/design-system/', status: 'active' },
   { id: 'business-os', label: 'Business OS', description: 'Strategie, nabídka, obchodní model a řízení firmy.', href: '/business-os/', status: 'active' },
