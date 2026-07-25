@@ -1,11 +1,11 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import SaosLayout from '../layouts/SaosLayout.astro';
 import { modules } from '../data/modules';
 
 const home = await getEntry('public', 'home');
 if (!home) throw new Error('Chybí obsah saos-home.');
-const { Content } = await home.render();
+const { Content } = await render(home);
 const active = modules.filter((item) => item.status === 'active').length;
 ---
 <SaosLayout title={home.data.title}>
