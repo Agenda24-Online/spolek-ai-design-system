@@ -45,6 +45,11 @@
       {
         "label": "UI komponenty",
         "href": "ui-components/"
+      },
+      {
+        "label": "Homepage webu",
+        "href": "web-homepage/",
+        "keywords": "mobilní web homepage návrh landing page Spolek AI"
       }
     ]
   },
