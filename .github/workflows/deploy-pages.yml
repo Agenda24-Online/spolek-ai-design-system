@@ -1,0 +1,76 @@
+name: Deploy original HTML SAOS to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'css/**'
+      - 'js/**'
+      - 'data/**'
+      - 'assets/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Validate original static HTML package
+        shell: bash
+        run: |
+          test -f index.html
+          test -f css/main.css
+          test -f js/app.js
+          test -f data/navigation.json
+          test -f assets/logos/spolek-ai-logo.svg
+          test -f assets/images/homepage-concept.png
+          test -f assets/avatars/team-lineup.png
+          test -f assets/avatars/full-body-team.png
+          test -f assets/avatars/member-cards.png
+          python -m json.tool data/navigation.json >/dev/null
+          python -m json.tool data/colors.json >/dev/null
+          python -m json.tool data/members.json >/dev/null
+          while IFS= read -r page; do
+            grep -q 'css/main.css' "$page"
+            grep -q 'js/app.js' "$page"
+          done < <(find . -name index.html -not -path './.git/*' -print)
+
+      - name: Prepare original HTML site
+        run: |
+          mkdir _site
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '_site/' \
+            --exclude 'docs/' \
+            --exclude 'README.md' \
+            ./ _site/
+          touch _site/.nojekyll
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -6,6 +6,11 @@
     "children": []
   },
   {
+    "label": "O projektu",
+    "href": "project/",
+    "group": "Hlavní"
+  },
+  {
     "label": "Brand",
     "href": "brand/",
     "group": "Hlavní",
