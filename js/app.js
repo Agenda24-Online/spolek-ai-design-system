@@ -1,6 +1,24 @@
 const ROOT = document.body.dataset.root || './';
 let NAV_DATA = [];
 
+function ensureNavigationStyles() {
+  if (document.getElementById('saos-tree-navigation-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'saos-tree-navigation-styles';
+  style.textContent = `
+    .tree-item{margin:2px 0}
+    .tree-row{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center}
+    .tree-spacer{width:28px}
+    .tree-toggle{width:28px;height:36px;border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer;transition:transform .18s ease,color .18s ease}
+    .tree-toggle:hover{color:var(--orange)}
+    .tree-item.open>.tree-row .tree-toggle{transform:rotate(90deg);color:var(--orange)}
+    .tree-children{display:none;margin:2px 0 8px 28px;padding-left:8px;border-left:1px solid var(--line)}
+    .tree-item.open>.tree-children{display:block}
+    .tree-children a{padding:8px 10px;font-size:13px}
+  `;
+  document.head.appendChild(style);
+}
+
 function normalizePath(path) {
   let normalized = path.replace(/\/index\.html$/, '/').replace(/^\/+/, '');
   const marker = 'spolek-ai-design-system/';
@@ -138,6 +156,7 @@ function setupDiagram() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
+    ensureNavigationStyles();
     await buildNavigation();
     setupSearch();
     setupCopy();
