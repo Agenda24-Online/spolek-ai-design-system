@@ -1,0 +1,11 @@
+SAOS CORE 2.1
+1. Zůstaň ve větvi develop.
+2. Add file → Upload files.
+3. Nahraj obsah této rozbalené složky.
+4. Přepíší se js/app.js a data/navigation.json.
+5. Přidají se:
+   css/core-2.1.css
+   data/metadata.json
+   future-ideas/index.html
+   company-map/index.html
+6. Commit message: SAOS Core 2.1

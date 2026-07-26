@@ -2,7 +2,8 @@
   {
     "label": "Dashboard",
     "href": "index.html",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": []
   },
   {
     "label": "O projektu",
@@ -12,76 +13,106 @@
   {
     "label": "Brand",
     "href": "brand/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": [
+      {
+        "label": "Barvy",
+        "href": "colors/"
+      },
+      {
+        "label": "Typografie",
+        "href": "typography/"
+      },
+      {
+        "label": "Avataři",
+        "href": "avatars/"
+      },
+      {
+        "label": "Motion",
+        "href": "motion/"
+      }
+    ]
   },
   {
     "label": "Design System",
     "href": "design-system/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": [
+      {
+        "label": "Design tokeny",
+        "href": "design-tokens/"
+      },
+      {
+        "label": "UI komponenty",
+        "href": "ui-components/"
+      }
+    ]
   },
   {
     "label": "AI Team",
     "href": "ai-team/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": []
   },
   {
     "label": "Business OS",
     "href": "business-os/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": [
+      {
+        "label": "Business model",
+        "href": "business-model/"
+      },
+      {
+        "label": "Workflow",
+        "href": "workflow/"
+      },
+      {
+        "label": "Mapa firmy",
+        "href": "company-map/"
+      }
+    ]
   },
   {
     "label": "Marketing",
     "href": "marketing/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": []
   },
   {
     "label": "Knowledge Base",
     "href": "knowledge-base/",
-    "group": "Hlavní"
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Assets Library",
+    "href": "assets-library/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Decisions",
+    "href": "decisions/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Budoucí nápady",
+    "href": "future-ideas/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Changelog",
+    "href": "changelog/",
+    "group": "Hlavní",
+    "children": []
   },
   {
     "label": "Laboratoř",
     "href": "laboratory/",
-    "group": "Hlavní"
-  },
-  {
-    "label": "Barvy",
-    "href": "colors/",
-    "group": "Design"
-  },
-  {
-    "label": "Typografie",
-    "href": "typography/",
-    "group": "Design"
-  },
-  {
-    "label": "Avataři",
-    "href": "avatars/",
-    "group": "Design"
-  },
-  {
-    "label": "Motion",
-    "href": "motion/",
-    "group": "Design"
-  },
-  {
-    "label": "Business model",
-    "href": "business-model/",
-    "group": "Byznys"
-  },
-  {
-    "label": "Workflow",
-    "href": "workflow/",
-    "group": "Byznys"
-  },
-  {
-    "label": "Design tokeny",
-    "href": "design-tokens/",
-    "group": "Vývoj"
-  },
-  {
-    "label": "UI komponenty",
-    "href": "ui-components/",
-    "group": "Vývoj"
+    "group": "Hlavní",
+    "children": []
   }
 ]

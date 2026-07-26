@@ -1,0 +1,53 @@
+{
+  "version": "2.1.0",
+  "status": "develop",
+  "updated": "2026-07-25",
+  "author": "Martin Řezníček",
+  "pages": {
+    "index.html": {
+      "title": "Dashboard",
+      "updated": "2026-07-25",
+      "related": [
+        "business-os/",
+        "ai-team/",
+        "future-ideas/"
+      ]
+    },
+    "brand/": {
+      "title": "Brand",
+      "updated": "2026-07-25",
+      "related": [
+        "colors/",
+        "typography/",
+        "avatars/"
+      ]
+    },
+    "business-os/": {
+      "title": "Business OS",
+      "updated": "2026-07-25",
+      "related": [
+        "business-model/",
+        "workflow/",
+        "company-map/"
+      ]
+    },
+    "future-ideas/": {
+      "title": "Budoucí nápady",
+      "updated": "2026-07-25",
+      "related": [
+        "laboratory/",
+        "decisions/",
+        "changelog/"
+      ]
+    },
+    "company-map/": {
+      "title": "Mapa firmy",
+      "updated": "2026-07-25",
+      "related": [
+        "workflow/",
+        "business-model/",
+        "ai-team/"
+      ]
+    }
+  }
+}
