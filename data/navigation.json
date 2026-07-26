@@ -77,7 +77,13 @@
     "label": "Marketing",
     "href": "marketing/",
     "group": "Hlavní",
-    "children": []
+    "children": [
+      {
+        "label": "Videa",
+        "href": "marketing/videa/",
+        "keywords": "AI tým influenceři Gemini Flow prompty video"
+      }
+    ]
   },
   {
     "label": "Knowledge Base",
