@@ -102,6 +102,48 @@ async function buildNavigation() {
   });
 }
 
+
+function setupMobileMenu() {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar || document.querySelector('.mobile-menu-toggle')) return;
+
+  const toggle = document.createElement('button');
+  toggle.className = 'mobile-menu-toggle';
+  toggle.type = 'button';
+  toggle.setAttribute('aria-label', 'Otevřít menu');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<span></span>';
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'mobile-menu-backdrop';
+
+  const closeMenu = () => {
+    document.body.classList.remove('mobile-menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Otevřít menu');
+  };
+
+  const toggleMenu = () => {
+    const isOpen = document.body.classList.toggle('mobile-menu-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Zavřít menu' : 'Otevřít menu');
+  };
+
+  toggle.addEventListener('click', toggleMenu);
+  backdrop.addEventListener('click', closeMenu);
+  sidebar.addEventListener('click', event => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1080) closeMenu();
+  });
+
+  document.body.append(toggle, backdrop);
+}
+
 function setupSearch() {
   const input = document.querySelector('[data-search]');
   const panel = document.querySelector('[data-search-panel]');
@@ -158,6 +200,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     ensureNavigationStyles();
     await buildNavigation();
+    setupMobileMenu();
     setupSearch();
     setupCopy();
     setupDiagram();
