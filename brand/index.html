@@ -1,1 +1,82 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brand — Spolek.ai</title><link rel="stylesheet" href="../css/main.css"></head><body data-root="../"><div class="app"><aside class="sidebar"><a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a><nav class="nav" data-nav></nav><div class="sidebar-foot">Spolek.ai Operating System • v1.0</div></aside><div class="main"><header class="topbar"><input class="search" data-search placeholder="Hledat v Brand OS…"><span class="version">Living system • v1.0</span></header><div class="search-panel" data-search-panel></div><main class="page"><div class="wrap"><div class="hero"><div class="eyebrow">Vizuální identita</div><h1>Brand</h1></div><section class="section"><p class="lead">Značka kombinuje čistotu, energii a lidsky uchopitelnou futurističnost. Není kyberpunková ani chladná.</p><div class="grid grid-3"><a class="card" href="../colors/" style="text-decoration:none"><h3>Barvy</h3><p>Primární oranžová, teplá bílá a temný text.</p></a><a class="card" href="../typography/" style="text-decoration:none"><h3>Typografie</h3><p>Manrope Variable + Inter Variable.</p></a><a class="card" href="../avatars/" style="text-decoration:none"><h3>AI avataři</h3><p>Jednotná rodina sedmi členů.</p></a></div></section><section class="section"><h2>Logo</h2><div class="grid grid-2"><div class="card" style="display:grid;place-items:center;min-height:260px"><img src="../assets/logos/spolek-ai-logo.svg" style="max-width:75%"></div><div class="card" style="display:grid;place-items:center;min-height:260px;background:#17191F"><img src="../assets/logos/spolek-ai-logo.svg" style="max-width:75%;filter:brightness(0) invert(1)"></div></div></section></div></main></div></div><div class="toast" data-toast>Zkopírováno</div><script src="../js/app.js"></script></body></html>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brand a loga — Spolek.ai</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .brand-palette{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+    .brand-color{min-height:180px;border-radius:18px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;font-weight:800}
+    .brand-color span{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.72}
+    .brand-color.orange{background:#F15A00;color:#fff}.brand-color.ink{background:#15171D;color:#fff}.brand-color.white{background:#fff;color:#15171D;border:1px solid var(--line)}
+    .logo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .logo-card{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+    .logo-preview{min-height:350px;padding:42px;display:grid;place-items:center}
+    .logo-preview.dark{background:#15171D}.logo-preview.light{background:#fff}
+    .logo-preview img{display:block;width:min(100%,600px);max-height:270px;object-fit:contain}
+    .logo-preview.symbol img{max-width:260px}.logo-preview.wordmark img{max-height:120px}
+    .logo-info{padding:22px;border-top:1px solid var(--line)}
+    .logo-info h3{margin-bottom:8px}.logo-info p{margin:0;color:var(--muted)}
+    .downloads{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+    .downloads a{display:inline-flex;padding:9px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;font-size:13px;font-weight:800;background:#fff;color:#15171D}
+    .downloads a:hover{border-color:#F15A00;color:#F15A00}
+    .download-all{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border-radius:20px;background:#15171D;color:#fff}
+    .download-all p{margin:6px 0 0;color:#c9cbd0}.download-all .btn{flex:0 0 auto}
+    .usage-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    @media(max-width:900px){.brand-palette,.logo-grid,.usage-list{grid-template-columns:1fr}.download-all{align-items:flex-start;flex-direction:column}.logo-preview{min-height:280px;padding:30px}}
+  </style>
+</head>
+<body data-root="../">
+<div class="app">
+  <aside class="sidebar">
+    <a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a>
+    <nav class="nav" data-nav></nav>
+    <div class="sidebar-foot">Spolek.ai Operating System • v1.0</div>
+  </aside>
+  <div class="main">
+    <header class="topbar"><input class="search" data-search placeholder="Hledat v Brand OS…"><span class="version">Living system • v1.0</span></header>
+    <div class="search-panel" data-search-panel></div>
+    <main class="page"><div class="wrap">
+      <div class="hero"><div class="eyebrow">Vizuální identita • Logo systém</div><h1>Brand Spolek.ai</h1><p class="lead">Oficiální logo systém, barevné varianty a zdrojové soubory pro správné použití značky Spolek.ai.</p></div>
+
+      <section class="section"><div class="eyebrow">Základ značky</div><h2>Brand barvy</h2><div class="brand-palette">
+        <div class="brand-color orange"><span>Primary Orange</span>#F15A00</div>
+        <div class="brand-color ink"><span>Ink</span>#15171D</div>
+        <div class="brand-color white"><span>White</span>#FFFFFF</div>
+      </div></section>
+
+      <section class="section"><div class="download-all"><div><div class="eyebrow">Kompletní balíček</div><h3>Všechna loga v jednom ZIP</h3><p>Symbol, svislé logo, vodorovné logo a wordmark ve světlých i tmavých variantách.</p></div><a class="btn primary" href="../assets/logos/spolek-ai-loga-komplet-2026.zip" download>Stáhnout všechna loga</a></div></section>
+
+      <section class="section"><div class="eyebrow">Primární varianta</div><h2>Logo se symbolem nad názvem</h2><div class="logo-grid">
+        <article class="logo-card"><div class="logo-preview light"><img src="../assets/logos/spolek-ai-2026/logo-stacked-dark.svg" alt="Spolek.ai – svislé logo s tmavým textem"></div><div class="logo-info"><h3>Na bílém pozadí</h3><p>Primární varianta s tmavým textem #15171D.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/logo-stacked-dark.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/logo-stacked-dark.png" download>PNG</a></div></div></article>
+        <article class="logo-card"><div class="logo-preview dark"><img src="../assets/logos/spolek-ai-2026/logo-stacked-light.svg" alt="Spolek.ai – svislé logo s bílým textem"></div><div class="logo-info"><h3>Na černém pozadí</h3><p>Inverzní varianta s bílým textem #FFFFFF.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/logo-stacked-light.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/logo-stacked-light.png" download>PNG</a></div></div></article>
+      </div></section>
+
+      <section class="section"><div class="eyebrow">Vodorovná varianta</div><h2>Symbol vlevo od názvu</h2><div class="logo-grid">
+        <article class="logo-card"><div class="logo-preview light wordmark"><img src="../assets/logos/spolek-ai-2026/logo-horizontal-dark.svg" alt="Spolek.ai – vodorovné logo s tmavým textem"></div><div class="logo-info"><h3>Na bílém pozadí</h3><p>Pro hlavičky webů, dokumenty a široké formáty.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/logo-horizontal-dark.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/logo-horizontal-dark-350x80.svg" download>SVG 350 × 80</a><a href="../assets/logos/spolek-ai-2026/logo-horizontal-dark.png" download>PNG</a><a href="../assets/logos/spolek-ai-2026/logo-horizontal-dark-on-white.jpg" download>JPG</a></div></div></article>
+        <article class="logo-card"><div class="logo-preview dark wordmark"><img src="../assets/logos/spolek-ai-2026/logo-horizontal-light.svg" alt="Spolek.ai – vodorovné logo s bílým textem"></div><div class="logo-info"><h3>Na černém pozadí</h3><p>Pro tmavé plochy, video a prezentace.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/logo-horizontal-light.svg" download>SVG</a></div></div></article>
+      </div></section>
+
+      <section class="section"><div class="eyebrow">Textová varianta</div><h2>Samostatný nápis</h2><div class="logo-grid">
+        <article class="logo-card"><div class="logo-preview light wordmark"><img src="../assets/logos/spolek-ai-2026/wordmark-dark.svg" alt="Spolek.ai – tmavý wordmark"></div><div class="logo-info"><h3>Na bílém pozadí</h3><p>Samostatný název bez symbolu.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/wordmark-dark.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/wordmark-dark-on-white.jpg" download>JPG</a></div></div></article>
+        <article class="logo-card"><div class="logo-preview dark wordmark"><img src="../assets/logos/spolek-ai-2026/wordmark-light.svg" alt="Spolek.ai – bílý wordmark"></div><div class="logo-info"><h3>Na černém pozadí</h3><p>Světlá textová varianta pro tmavé plochy.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/wordmark-light.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/wordmark-light.png" download>PNG</a></div></div></article>
+      </div></section>
+
+      <section class="section"><div class="eyebrow">Znak</div><h2>Samostatný symbol</h2><div class="logo-grid">
+        <article class="logo-card"><div class="logo-preview light symbol"><img src="../assets/logos/spolek-ai-2026/symbol-orange.svg" alt="Oranžový symbol Spolek.ai na bílém pozadí"></div><div class="logo-info"><h3>Na bílém pozadí</h3><p>Pro favicon, ikonu aplikace, profilové obrázky a drobné formáty.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/symbol-orange.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/symbol-orange.png" download>PNG</a><a href="../assets/logos/spolek-ai-2026/symbol-orange-on-white.jpg" download>JPG</a></div></div></article>
+        <article class="logo-card"><div class="logo-preview dark symbol"><img src="../assets/logos/spolek-ai-2026/symbol-orange.svg" alt="Oranžový symbol Spolek.ai na černém pozadí"></div><div class="logo-info"><h3>Na černém pozadí</h3><p>Stejný oranžový symbol #F15A00 se používá i na tmavém podkladu.</p><div class="downloads"><a href="../assets/logos/spolek-ai-2026/symbol-orange.svg" download>SVG</a><a href="../assets/logos/spolek-ai-2026/symbol-orange.png" download>PNG</a></div></div></article>
+      </div></section>
+
+      <section class="section"><div class="eyebrow">Pravidla použití</div><h2>Kterou variantu zvolit</h2><div class="usage-list">
+        <div class="card"><h3>SVG</h3><p>První volba pro web, tisk a všechny situace, kde je nutná dokonale ostrá kresba v libovolné velikosti.</p></div>
+        <div class="card"><h3>PNG</h3><p>Pro sociální sítě, prezentace a aplikace, které nepodporují SVG. Transparentní pozadí zachovává univerzální použití.</p></div>
+        <div class="card"><h3>JPG</h3><p>Používat jen tam, kde je vyžadován rastrový soubor bez průhlednosti. Podklad je součástí obrázku.</p></div>
+      </div></section>
+    </div></main>
+  </div>
+</div>
+<div class="toast" data-toast>Zkopírováno</div>
+<script src="../js/app.js?v=20260726-logo"></script>
+</body>
+</html>

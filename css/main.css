@@ -41,3 +41,9 @@
   .team-basic dl{grid-template-columns:1fr;gap:0}
   .team-basic dd{margin:0 0 8px}
 }
+
+/* Primary stacked brand logo in the persistent sidebar. */
+.sidebar>.logo img{width:190px;max-height:128px}
+@media(max-width:1080px){
+  .sidebar>.logo img{width:105px;max-height:72px}
+}
