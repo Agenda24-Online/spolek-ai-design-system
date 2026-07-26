@@ -47,3 +47,33 @@
 @media(max-width:1080px){
   .sidebar>.logo img{width:105px;max-height:72px}
 }
+
+
+/* Mobile off-canvas navigation */
+.mobile-menu-toggle,.mobile-menu-backdrop{display:none}
+@media(max-width:1080px){
+  body.mobile-menu-open{overflow:hidden}
+  .app{display:block}
+  .sidebar{position:fixed;inset:0 auto 0 0;width:min(86vw,360px);height:100dvh;padding:22px 16px;border-right:1px solid var(--line);border-bottom:0;overflow-y:auto;background:var(--paper);box-shadow:18px 0 60px rgba(21,23,29,.18);transform:translateX(-105%);transition:transform .25s ease;z-index:210}
+  body.mobile-menu-open .sidebar{transform:translateX(0)}
+  .sidebar>.logo{padding:8px 52px 20px 10px}
+  .sidebar>.logo img{width:160px;max-height:110px}
+  .sidebar .nav{display:block;overflow:visible}
+  .sidebar .nav-group{display:block}
+  .sidebar .nav-title,.sidebar .sidebar-foot{display:block}
+  .sidebar .nav a{white-space:normal}
+  .mobile-menu-toggle{display:inline-flex;position:fixed;top:13px;left:14px;z-index:230;width:46px;height:46px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--ink);box-shadow:0 8px 24px rgba(21,23,29,.10);cursor:pointer}
+  .mobile-menu-toggle span,.mobile-menu-toggle::before,.mobile-menu-toggle::after{content:"";position:absolute;width:22px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+  .mobile-menu-toggle::before{transform:translateY(-7px)}
+  .mobile-menu-toggle::after{transform:translateY(7px)}
+  body.mobile-menu-open .mobile-menu-toggle span{opacity:0}
+  body.mobile-menu-open .mobile-menu-toggle::before{transform:rotate(45deg)}
+  body.mobile-menu-open .mobile-menu-toggle::after{transform:rotate(-45deg)}
+  .mobile-menu-backdrop{position:fixed;inset:0;z-index:200;background:rgba(21,23,29,.46);backdrop-filter:blur(2px)}
+  body.mobile-menu-open .mobile-menu-backdrop{display:block}
+  .topbar{top:0;padding-left:76px;min-height:72px}
+}
+@media(max-width:620px){
+  .mobile-menu-toggle{top:11px;left:12px}
+  .topbar{padding-left:70px}
+}
