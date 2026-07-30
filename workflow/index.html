@@ -1,1 +1,89 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Workflow — Spolek.ai</title><link rel="stylesheet" href="../css/main.css"></head><body data-root="../"><div class="app"><aside class="sidebar"><a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a><nav class="nav" data-nav></nav><div class="sidebar-foot">Spolek.ai Operating System • v1.0</div></aside><div class="main"><header class="topbar"><input class="search" data-search placeholder="Hledat v Brand OS…"><span class="version">Living system • v1.0</span></header><div class="search-panel" data-search-panel></div><main class="page"><div class="wrap"><div class="hero"><div class="eyebrow">Business OS / Proces</div><h1>Workflow</h1></div><section class="section"><p class="lead">Jeden klientský cyklus, sedm jasně přidělených odpovědností.</p><div class="flow"><div class="node"><b>1. Audit</b><small>SPIKE</small></div><div class="node"><b>2. Diagnóza</b><small>ROOT</small></div><div class="node"><b>3. Strategie</b><small>NEXUS</small></div><div class="node"><b>4. Produkce</b><small>PIXIE</small></div><div class="node"><b>5. Distribuce</b><small>WAVE</small></div><div class="node"><b>6. Analýza</b><small>ORBIT</small></div><div class="node"><b>7. Optimalizace</b><small>MAX</small></div></div></section></div></main></div></div><div class="toast" data-toast>Zkopírováno</div><script src="../js/app.js"></script></body></html>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Workflow — Spolek.ai</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .workflow-stack{display:grid;gap:16px;margin-top:34px}
+    .workflow-layer{border:1px solid var(--line);border-radius:22px;padding:24px}
+    .workflow-layer strong,.workflow-layer span,.workflow-layer small{display:block}
+    .workflow-layer strong{font:800 24px/1.1 var(--display)}
+    .workflow-layer span{margin-top:6px;font-weight:800;color:var(--orange)}
+    .workflow-layer small{margin-top:8px;color:var(--muted);font-size:14px}
+    .workflow-layer.manager{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .workflow-layer.manager small{color:#D9DADF}
+    .workflow-layer.knowledge{background:var(--soft);border:2px solid var(--orange)}
+    .execution-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .execution-node{position:relative;min-height:165px;padding:20px 16px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .execution-node:not(:last-child):after{content:"→";position:absolute;right:-16px;top:50%;z-index:2;color:var(--orange);font-size:22px;font-weight:900}
+    .execution-node i,.execution-node b,.execution-node small{display:block}
+    .execution-node i{font-style:normal;color:var(--orange);font-weight:900}
+    .execution-node b{font:800 20px/1.1 var(--display);margin-top:30px}
+    .execution-node small{margin-top:8px;color:var(--muted)}
+    .feedback-loop{margin-top:4px;padding:18px;border-radius:16px;background:#FFF1E7;color:#6D2700;font-weight:800;text-align:center}
+    .role-boundaries{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+    .role-boundaries .card{margin:0}
+    @media(max-width:900px){.execution-flow{grid-template-columns:1fr}.execution-node{min-height:auto}.execution-node:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px}.role-boundaries{grid-template-columns:1fr}}
+  </style>
+</head>
+<body data-root="../">
+  <div class="app">
+    <aside class="sidebar">
+      <a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a>
+      <nav class="nav" data-nav></nav>
+      <div class="sidebar-foot">Spolek.ai Operating System • v1.0</div>
+    </aside>
+    <div class="main">
+      <header class="topbar"><input class="search" data-search placeholder="Hledat v Brand OS…"><span class="version">Living system • v1.0</span></header>
+      <div class="search-panel" data-search-panel></div>
+      <main class="page"><div class="wrap">
+        <div class="hero">
+          <div class="eyebrow">Business OS / Proces</div>
+          <h1>Workflow</h1>
+          <p class="lead">Pět výkonných kroků mezi dvěma průběžnými vrstvami. MAX řídí celý projekt shora a ROOT drží jeho data, paměť a klientský operační systém zdola.</p>
+        </div>
+
+        <section class="section">
+          <div class="workflow-stack">
+            <div class="workflow-layer manager">
+              <strong>MAX — horní řídicí vrstva</strong>
+              <span>AI Provozní ředitel</span>
+              <small>Od začátku do konce koordinuje úkoly, termíny, schvalování, návaznosti, rozsah a čerpání schváleného rozpočtu. Neurčuje strategii; zajišťuje, že strategie NEXUSU bude správně provedena. Po vyhodnocení ORBITEM řídí předání poznatků do dalšího cyklu.</small>
+            </div>
+
+            <div class="execution-flow" aria-label="Výkonné marketingové workflow">
+              <div class="execution-node"><i>01</i><b>Analýza</b><small>SPIKE zkoumá aktuální stav a vytváří nová zjištění. Nic strategicky nerozhoduje.</small></div>
+              <div class="execution-node"><i>02</i><b>Strategie</b><small>NEXUS jako jediný navrhuje strategii, realizační plán, rozpočet, cíle a KPI.</small></div>
+              <div class="execution-node"><i>03</i><b>Produkce</b><small>PIXIE vyrábí obsah, média a další výstupy podle zadání NEXUSU.</small></div>
+              <div class="execution-node"><i>04</i><b>Distribuce</b><small>WAVE nasazuje hotové výstupy do určených kanálů a kampaní.</small></div>
+              <div class="execution-node"><i>05</i><b>Vyhodnocení</b><small>ORBIT měří dopad, výkon, konverze, náklady a návratnost realizované strategie.</small></div>
+            </div>
+
+            <div class="feedback-loop">ORBIT předá výsledky → ROOT je uloží jako firemní znalost → NEXUS připraví upravený plán → MAX řídí další realizační cyklus.</div>
+
+            <div class="workflow-layer knowledge">
+              <strong>ROOT — spodní datová a znalostní vrstva</strong>
+              <span>AI Znalostní systém</span>
+              <small>Zakládá a spravuje klientský marketingový operační systém. Uchovává podklady, zdroje, analýzy SPIKEA, strategie NEXUSU, výstupy PIXIE, distribuční historii WAVE, výsledky ORBITU, schválení a verze. Je zdrojem pravdy a dlouhodobou pamětí celého workflow.</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="eyebrow">Výhradní odpovědnosti</div>
+          <h2>Role se nepřekrývají</h2>
+          <div class="role-boundaries">
+            <article class="card"><h3>SPIKE analyzuje. NEXUS rozhoduje.</h3><p>SPIKE aktivně zjišťuje, co se ve firmě děje a proč. Výsledkem je strukturovaná analýza. NEXUS z analýzy a znalostí ROOTU určuje, co firma potřebuje, a vytváří strategii, plán a rozpočet.</p></article>
+            <article class="card"><h3>ORBIT vyhodnocuje. MAX řídí pokračování.</h3><p>ORBIT objektivně změří, co fungovalo a co ne. MAX zajistí předání výsledků, nápravu neúspěšných částí, nové zadání a plynulé pokračování projektu. MAX sám nepřepisuje strategii.</p></article>
+          </div>
+        </section>
+      </div></main>
+    </div>
+  </div>
+  <div class="toast" data-toast>Zkopírováno</div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
