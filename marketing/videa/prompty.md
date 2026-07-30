@@ -14,7 +14,7 @@ SPIKE se podívá přímo do kamery a klidným, sebevědomým mužským hlasem �
 
 Projev je přesný, neústupný a profesionální. Přirozený pohyb úst, rukou a očí. Žádné titulky, žádný další text, žádné jiné osoby, žádná změna obličeje.
 
-## 2. ROOT — AI Diagnostik
+## 2. ROOT — AI Znalostní systém
 
 Vytvoř desetisekundové realistické vertikální video 9:16 podle přiloženého referenčního obrázku postavy ROOT. Zachovej naprosto přesně její obličej, tmavé vlasy stažené do culíku, věk, postavu a bílou futuristickou kombinézu s oranžovými detaily a logem spolek.ai. Neměň identitu, účes, oblečení ani barvy.
 
@@ -22,7 +22,7 @@ ROOT stojí v čistém světlém analytickém prostoru. V ruce drží průsvitn�
 
 Přímým, analytickým ženským hlasem česky řekne přesně:
 
-> „Jsem ROOT, AI Diagnostik. Hledám skutečné příčiny problémů. Zjišťuji, proč váš marketing, obsah nebo prodej nefunguje tak, jak by mohl.“
+> „Jsem ROOT, AI Znalostní systém. Uchovávám data, podklady a výsledky celého projektu, aby všichni pracovali se stejnou aktuální pravdou.“
 
 Projev je všímavý, ostrý a sebevědomý. Přirozený pohyb úst a gest. Žádné titulky, žádné další osoby, žádná změna obličeje.
 
@@ -34,7 +34,7 @@ NEXUS stojí před jemnou světelnou strategickou mapou. V ruce drží černou s
 
 NEXUS se klidně otočí ke kameře a rozhodným mužským hlasem česky řekne přesně:
 
-> „Jsem NEXUS, AI Strateg. Navrhuji růstovou strategii, stanovuji priority a převádím výsledky auditu a diagnostiky do konkrétního plánu.“
+> „Jsem NEXUS, AI Strateg. Z analýzy SPIKEA a znalostí ROOTU vytvářím strategii, realizační plán, rozpočet, cíle a KPI.“
 
 Působí klidně, autoritativně a vizionářsky. Přirozený pohyb úst a těla. Žádné titulky, žádné jiné osoby, žádná změna identity.
 
@@ -74,7 +74,7 @@ ORBIT se podívá do kamery a rozvážným mužským hlasem česky řekne přesn
 
 Projev je zkušený, objektivní a přesný. Žádné titulky, žádné další osoby, žádná změna obličeje.
 
-## 7. MAX — AI Optimalizátor
+## 7. MAX — AI Provozní ředitel
 
 Vytvoř desetisekundové realistické vertikální video 9:16 podle přiloženého referenčního obrázku postavy MAX. Zachovej přesně její obličej, krátké černé mikádo s ofinou, věk, postavu a bílou futuristickou kombinézu s oranžovými detaily a logem spolek.ai. Neměň její identitu, účes, oblečení ani barvy.
 
@@ -82,7 +82,7 @@ MAX stojí v čistém světlém technologickém prostoru. Vedle ní se zobrazí 
 
 MAX soustředěným a energickým ženským hlasem česky řekne přesně:
 
-> „Jsem MAX, AI Optimalizátor. Testuji změny, ladím procesy a každý den hledám cestu, jak zvýšit výkon, efektivitu a výsledky.“
+> „Jsem MAX, AI Provozní ředitel. Řídím úkoly, termíny a návaznosti od začátku projektu až po další růstový cyklus.“
 
 Projev je disciplinovaný, výkonnostní a důsledný. Žádné titulky, žádné další osoby, žádná změna obličeje.
 
@@ -101,3 +101,4 @@ Všechna videa musí mít:
 - žádný černý nebo kyberpunkový vzhled.
 
 Design značky je v manuálu definovaný jako čistý, energický a lidsky futuristický, nikoliv chladný nebo kyberpunkový.
+
