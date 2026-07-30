@@ -6,6 +6,13 @@
     "children": []
   },
   {
+    "label": "Interní centrum",
+    "href": "https://spolek.ai/interni/",
+    "group": "Hlavní",
+    "keywords": "interní přístupy hesla trezor zabezpečené centrum WordPress sociální sítě",
+    "children": []
+  },
+  {
     "label": "O projektu",
     "href": "project/",
     "group": "Hlavní"

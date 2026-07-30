@@ -19,6 +19,10 @@ function ensureNavigationStyles() {
   document.head.appendChild(style);
 }
 
+function resolveHref(href) {
+  return /^https?:\/\//i.test(href) ? href : ROOT + href;
+}
+
 function normalizePath(path) {
   let normalized = path.replace(/\/index\.html$/, '/').replace(/^\/+/, '');
   const marker = 'spolek-ai-design-system/';
@@ -71,7 +75,7 @@ async function buildNavigation() {
     }
 
     const link = document.createElement('a');
-    link.href = ROOT + item.href;
+    link.href = resolveHref(item.href);
     link.textContent = item.label;
     const itemPath = item.href === 'index.html' ? 'index.html' : item.href;
     if (current === itemPath || current.startsWith(itemPath)) link.classList.add('active');
@@ -84,7 +88,7 @@ async function buildNavigation() {
 
       item.children.forEach(child => {
         const childLink = document.createElement('a');
-        childLink.href = ROOT + child.href;
+        childLink.href = resolveHref(child.href);
         childLink.textContent = child.label;
         if (current === child.href || current.startsWith(child.href)) childLink.classList.add('active');
         children.appendChild(childLink);
@@ -162,7 +166,7 @@ function setupSearch() {
     );
 
     panel.innerHTML = matches.map(page =>
-      '<a class="search-result" href="' + ROOT + page.href + '">' +
+      '<a class="search-result" href="' + resolveHref(page.href) + '">' +
       '<strong>' + page.label + '</strong><span>' + page.href + '</span></a>'
     ).join('') || '<div class="search-empty">Nic nenalezeno.</div>';
     panel.classList.add('open');
