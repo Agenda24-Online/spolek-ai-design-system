@@ -5,7 +5,7 @@
   },
   {
     "name": "ROOT",
-    "role": "AI Diagnostik"
+    "role": "AI Znalostní systém"
   },
   {
     "name": "NEXUS",
@@ -25,6 +25,7 @@
   },
   {
     "name": "MAX",
-    "role": "AI Optimalizátor"
+    "role": "AI Provozní ředitel"
   }
 ]
+
