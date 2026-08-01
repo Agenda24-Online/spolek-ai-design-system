@@ -71,6 +71,11 @@
         "keywords": "audit marketingu diagnostika KPI data úniky peněz auditní model"
       },
       {
+        "label": "ROOT Knowledge Core",
+        "href": "ai-team/root-knowledge-core/",
+        "keywords": "znalostní systém knowledge base zdroj pravdy dokumenty data metadata taxonomie ontologie znalostní graf RAG citace verzování asset library rozhodnutí archiv"
+      },
+      {
         "label": "NEXUS Plan Architect",
         "href": "ai-team/nexus-plan-architect/",
         "keywords": "strategie plán roadmapa rozpočet priority KPI růstový model strategická rozhodnutí"
