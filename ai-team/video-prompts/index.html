@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video prompty AI týmu — Spolek.ai</title>
+<link rel="stylesheet" href="../../css/main.css">
+<style>
+.prompt-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.prompt-tab{appearance:none;border:1px solid var(--line);background:#fff;color:var(--deep);padding:11px 16px;border-radius:999px;font:inherit;font-weight:800;cursor:pointer;transition:.2s ease}
+.prompt-tab:hover,.prompt-tab.active{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-1px)}
+.prompt-panel{display:none}
+.prompt-panel.active{display:block}
+.prompt-card{padding:0;overflow:hidden}
+.prompt-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);background:var(--soft)}
+.prompt-head h2{margin:0;font-size:clamp(24px,3vw,38px)}
+.prompt-actions{display:flex;flex-wrap:wrap;gap:10px}
+.prompt-code{margin:0;padding:22px;max-height:72vh;overflow:auto;white-space:pre-wrap;word-break:break-word;background:#15171d;color:#f7f7f4;font:500 14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.status{padding:22px;color:var(--muted)}
+.rules{margin-top:24px}
+@media(max-width:720px){.prompt-head{align-items:flex-start;flex-direction:column}.prompt-actions{width:100%}.prompt-actions .btn{flex:1;text-align:center}.prompt-code{font-size:12px;padding:16px;max-height:none}}
+</style>
+</head>
+<body data-root="../../">
+<div class="app">
+<aside class="sidebar">
+<a class="logo" href="../../index.html"><img src="../../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a>
+<nav class="nav" data-nav></nav>
+<div class="sidebar-foot">Spolek.ai Operating System • v2.0</div>
+</aside>
+<div class="main">
+<header class="topbar">
+<input class="search" data-search placeholder="Hledat ve Spolek.ai OS…">
+<span class="version">Living system • v2.0</span>
+</header>
+<div class="search-panel" data-search-panel></div>
+<main class="page"><div class="wrap">
+<div class="hero">
+<div class="eyebrow">AI Team • Gemini Flow • Omni Flash</div>
+<h1>Video prompty AI týmu</h1>
+<p class="lead">Kompletní produkční prompty pro desetisekundová vertikální videa jednotlivých rolí. Vyberte člena týmu, prompt si přečtěte nebo jedním kliknutím zkopírujte.</p>
+</div>
+<section class="section rules">
+<div class="grid grid-3">
+<div class="card"><h3>Oficiální postavy</h3><p>Každý prompt zachovává skutečnou podobu, uniformu, prostředí a roli daného člena týmu.</p></div>
+<div class="card"><h3>Český monolog</h3><p>Mluvený dialog je česky, v první osobě a v přítomném čase. Postava se zbytečně nepředstavuje jménem.</p></div>
+<div class="card"><h3>Texty v obraze</h3><p>Preferuje se obraz bez slov. Když systém text vytvoří, musí být pouze správně anglicky, čitelný a smysluplný.</p></div>
+</div>
+</section>
+<section class="section">
+<div class="prompt-tabs" role="tablist" aria-label="Video prompty členů AI týmu"></div>
+<div class="prompt-host"></div>
+</section>
+</div></main>
+</div>
+</div>
+<div class="toast" data-toast>Zkopírováno</div>
+<script src="../../js/app.js"></script>
+<script>
+const PROMPTS=[
+  {id:'spike',label:'SPIKE',file:'SPIKE.md'},
+  {id:'root',label:'ROOT',file:'ROOT.md'},
+  {id:'nexus',label:'NEXUS',file:'NEXUS.md'},
+  {id:'pixie',label:'PIXIE',file:'PIXIE.md'},
+  {id:'wave',label:'WAVE',file:'WAVE.md'},
+  {id:'orbit',label:'ORBIT',file:'ORBIT.md'},
+  {id:'max',label:'MAX',file:'MAX.md'}
+];
+const tabs=document.querySelector('.prompt-tabs');
+const host=document.querySelector('.prompt-host');
+const cache=new Map();
+function escapeHtml(value){return value.replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));}
+async function loadPrompt(item){
+  document.querySelectorAll('.prompt-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.id===item.id));
+  host.innerHTML='<div class="card prompt-card"><div class="status">Načítám prompt…</div></div>';
+  try{
+    let text=cache.get(item.file);
+    if(!text){const response=await fetch(item.file,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);text=await response.text();cache.set(item.file,text);}
+    host.innerHTML='<article class="card prompt-card"><div class="prompt-head"><h2>'+item.label+'</h2><div class="prompt-actions"><button class="btn primary" type="button" data-copy>Kopírovat prompt</button><a class="btn" href="'+item.file+'" target="_blank" rel="noopener">Otevřít MD</a></div></div><pre class="prompt-code"><code>'+escapeHtml(text)+'</code></pre></article>';
+    host.querySelector('[data-copy]').addEventListener('click',async()=>{await navigator.clipboard.writeText(text);const toast=document.querySelector('[data-toast]');toast.textContent='Prompt '+item.label+' zkopírován';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);});
+    history.replaceState(null,'','#'+item.id);
+  }catch(error){host.innerHTML='<div class="card prompt-card"><div class="status">Prompt se nepodařilo načíst. Otevřete přímo soubor <a href="'+item.file+'">'+item.file+'</a>.</div></div>';}
+}
+PROMPTS.forEach(item=>{const button=document.createElement('button');button.type='button';button.className='prompt-tab';button.dataset.id=item.id;button.textContent=item.label;button.addEventListener('click',()=>loadPrompt(item));tabs.appendChild(button);});
+const requested=location.hash.replace('#','').toLowerCase();
+loadPrompt(PROMPTS.find(item=>item.id===requested)||PROMPTS[0]);
+</script>
+</body>
+</html>
