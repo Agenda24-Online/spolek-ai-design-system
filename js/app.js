@@ -202,6 +202,11 @@ function setupDiagram() {
 function setupTeamModelLinks() {
   const models = [
     {
+      id: 'root',
+      href: 'root-knowledge-core/',
+      label: 'Otevřít komplexní model ROOT Knowledge Core'
+    },
+    {
       id: 'nexus',
       href: 'nexus-plan-architect/',
       label: 'Otevřít komplexní model NEXUS Plan Architect'
