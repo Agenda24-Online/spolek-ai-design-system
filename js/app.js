@@ -225,6 +225,11 @@ function setupTeamModelLinks() {
       id: 'orbit',
       href: 'orbit-insight-finder/',
       label: 'Otevřít komplexní model ORBIT Insight Finder'
+    },
+    {
+      id: 'max',
+      href: 'max-workflow-conductor/',
+      label: 'Otevřít komplexní model MAX Workflow Conductor'
     }
   ];
 
