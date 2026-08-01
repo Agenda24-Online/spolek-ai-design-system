@@ -41,6 +41,8 @@ jobs:
             ./ _site/
           touch _site/.nojekyll
           test -f _site/index.html
+          test -f _site/ai-team/root-knowledge-core/index.html
+          test -f _site/ai-team/root-knowledge-core/model.js
           test -f _site/ai-team/wave-reach-connector/index.html
           test -f _site/ai-team/orbit-insight-finder/index.html
 
