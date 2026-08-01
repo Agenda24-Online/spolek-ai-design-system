@@ -210,6 +210,11 @@ function setupTeamModelLinks() {
       id: 'pixie',
       href: 'pixie-production-studio/',
       label: 'Otevřít komplexní model PIXIE Production Studio'
+    },
+    {
+      id: 'wave',
+      href: 'wave-reach-connector/',
+      label: 'Otevřít komplexní model WAVE Reach Connector'
     }
   ];
 
