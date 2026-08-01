@@ -200,20 +200,35 @@ function setupDiagram() {
 }
 
 function setupTeamModelLinks() {
-  const nexus = document.querySelector('.team-profile#nexus');
-  if (!nexus || nexus.querySelector('[data-nexus-model-link]')) return;
+  const models = [
+    {
+      id: 'nexus',
+      href: 'nexus-plan-architect/',
+      label: 'Otevřít komplexní model NEXUS Plan Architect'
+    },
+    {
+      id: 'pixie',
+      href: 'pixie-production-studio/',
+      label: 'Otevřít komplexní model PIXIE Production Studio'
+    }
+  ];
 
-  const actions = document.createElement('div');
-  actions.className = 'actions';
-  actions.style.marginTop = '28px';
-  actions.dataset.nexusModelLink = '';
+  models.forEach(model => {
+    const profile = document.querySelector('.team-profile#' + model.id);
+    if (!profile || profile.querySelector('[data-model-link="' + model.id + '"]')) return;
 
-  const link = document.createElement('a');
-  link.className = 'btn primary';
-  link.href = 'nexus-plan-architect/';
-  link.textContent = 'Otevřít komplexní model NEXUS Plan Architect';
-  actions.appendChild(link);
-  nexus.appendChild(actions);
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+    actions.style.marginTop = '28px';
+    actions.dataset.modelLink = model.id;
+
+    const link = document.createElement('a');
+    link.className = 'btn primary';
+    link.href = model.href;
+    link.textContent = model.label;
+    actions.appendChild(link);
+    profile.appendChild(actions);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
