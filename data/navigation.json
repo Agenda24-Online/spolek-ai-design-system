@@ -64,7 +64,13 @@
     "label": "AI Team",
     "href": "ai-team/",
     "group": "Hlavní",
-    "children": []
+    "children": [
+      {
+        "label": "SPIKE Auditor",
+        "href": "ai-team/spike-auditor/",
+        "keywords": "audit marketingu diagnostika KPI data úniky peněz auditní model"
+      }
+    ]
   },
   {
     "label": "Business OS",
