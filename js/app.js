@@ -106,7 +106,6 @@ async function buildNavigation() {
   });
 }
 
-
 function setupMobileMenu() {
   const sidebar = document.querySelector('.sidebar');
   if (!sidebar || document.querySelector('.mobile-menu-toggle')) return;
@@ -200,6 +199,23 @@ function setupDiagram() {
   });
 }
 
+function setupTeamModelLinks() {
+  const nexus = document.querySelector('.team-profile#nexus');
+  if (!nexus || nexus.querySelector('[data-nexus-model-link]')) return;
+
+  const actions = document.createElement('div');
+  actions.className = 'actions';
+  actions.style.marginTop = '28px';
+  actions.dataset.nexusModelLink = '';
+
+  const link = document.createElement('a');
+  link.className = 'btn primary';
+  link.href = 'nexus-plan-architect/';
+  link.textContent = 'Otevřít komplexní model NEXUS Plan Architect';
+  actions.appendChild(link);
+  nexus.appendChild(actions);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     ensureNavigationStyles();
@@ -208,6 +224,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupSearch();
     setupCopy();
     setupDiagram();
+    setupTeamModelLinks();
   } catch (error) {
     console.error('SAOS init error', error);
   }
