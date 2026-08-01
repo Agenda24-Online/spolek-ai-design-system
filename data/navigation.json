@@ -94,6 +94,11 @@
         "label": "ORBIT Insight Finder",
         "href": "ai-team/orbit-insight-finder/",
         "keywords": "analytika měření dashboard reporting KPI ROI ROAS CAC LTV atribuce funnel kohorty experimenty predikce insight data výkon"
+      },
+      {
+        "label": "MAX Workflow Conductor",
+        "href": "ai-team/max-workflow-conductor/",
+        "keywords": "provozní řízení projekt úkoly workflow WBS RACI harmonogram kapacity rozpočet schvalování rizika incidenty release launch eskalace"
       }
     ]
   },
