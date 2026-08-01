@@ -215,6 +215,11 @@ function setupTeamModelLinks() {
       id: 'wave',
       href: 'wave-reach-connector/',
       label: 'Otevřít komplexní model WAVE Reach Connector'
+    },
+    {
+      id: 'orbit',
+      href: 'orbit-insight-finder/',
+      label: 'Otevřít komplexní model ORBIT Insight Finder'
     }
   ];
 
