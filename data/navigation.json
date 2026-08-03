@@ -119,7 +119,24 @@
   { "label": "Knowledge Base", "href": "knowledge-base/", "group": "Hlavní", "children": [] },
   { "label": "Assets Library", "href": "assets-library/", "group": "Hlavní", "children": [] },
   { "label": "Decisions", "href": "decisions/", "group": "Hlavní", "children": [] },
-  { "label": "Budoucí nápady", "href": "future-ideas/", "group": "Hlavní", "children": [] },
+  {
+    "label": "Budoucí nápady",
+    "href": "future-ideas/",
+    "group": "Hlavní",
+    "keywords": "budoucí nápady roadmapa produkty služby Growth Twin Revenue Rescue Client Cockpit",
+    "children": [
+      {
+        "label": "Přehled a infografika",
+        "href": "future-ideas/",
+        "keywords": "future ideas infografika workflow servis optimalizace"
+      },
+      {
+        "label": "Prezentace budoucí vize",
+        "href": "future-ideas/presentation/",
+        "keywords": "prezentace slides roadmapa SAOS budoucnost"
+      }
+    ]
+  },
   { "label": "Changelog", "href": "changelog/", "group": "Hlavní", "children": [] },
   { "label": "Laboratoř", "href": "laboratory/", "group": "Hlavní", "children": [] }
 ]

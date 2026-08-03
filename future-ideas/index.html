@@ -3,485 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Produktová vize, budoucí služby, automatizace a roadmapa rozvoje Spolek.ai Operating System.">
+  <meta name="description" content="Budoucí produkty, služby, automatizace, infografika workflow a roadmapa Spolek.ai Operating System.">
   <title>Budoucí nápady — Spolek.ai OS</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/core-2.1.css">
   <style>
-    .future-page{--future-dark:#17191f;--future-warm:#fff7f0}
-    .future-page .hero{padding-bottom:34px}
-    .future-page .hero h1{max-width:1050px}
-    .future-page .hero .lead{max-width:1040px}
-    .future-page .actions{margin-top:28px}
-    .future-nav{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 48px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:18px;position:sticky;top:78px;z-index:8;box-shadow:0 10px 32px rgba(50,28,15,.05)}
-    .future-nav a{padding:9px 12px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:750;color:#41454c}
-    .future-nav a:hover{background:var(--soft);color:var(--orange)}
-    .future-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
-    .future-callout{background:linear-gradient(145deg,var(--future-dark),#272a32);color:#fff;border:0;overflow:hidden;position:relative}
-    .future-callout:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-95px;bottom:-130px;background:radial-gradient(circle,rgba(241,90,0,.62),rgba(241,90,0,0) 70%)}
-    .future-callout h2,.future-callout h3{color:#fff}
-    .future-callout p{color:#d8dae0;max-width:780px}
-    .future-callout strong{color:#fff}
-    .future-highlight{font-family:var(--display);font-size:clamp(28px,4vw,54px);line-height:1.04;letter-spacing:-.04em;margin:12px 0 18px;max-width:900px}
-    .future-note{background:var(--soft);border:1px solid #efc3a8;border-radius:18px;padding:22px}
-    .future-note h3{font-size:22px;margin-bottom:10px}
-    .future-note p:last-child{margin-bottom:0}
-    .future-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-    .future-meta span,.idea-status,.idea-role,.priority-badge{display:inline-flex;align-items:center;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-    .future-meta span,.idea-role{background:#fff;border:1px solid var(--line);color:#6d5445}
-    .idea-status{background:var(--soft);color:var(--orange)}
-    .status-research{background:#f1f2f5;color:#555b65}
-    .status-next{background:#fff1e7;color:#b74400}
-    .status-priority{background:#17191f;color:#fff}
-    .status-later{background:#fff8d9;color:#796300}
-    .north-star{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(310px,.8fr);gap:18px;align-items:stretch}
-    .north-star-main{background:linear-gradient(135deg,#fff,#fff4eb);border:1px solid #efc3a8;border-radius:26px;padding:clamp(24px,4vw,44px)}
-    .north-star-main h2{margin-bottom:12px}
-    .north-star-main .lead{font-size:clamp(18px,1.8vw,24px)}
-    .scenario-list{display:grid;gap:10px;margin-top:24px}
-    .scenario{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:700}
-    .north-star-side{display:grid;gap:12px}
-    .north-star-side .card{box-shadow:none}
-    .role-flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;align-items:center}
-    .role-flow span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #efc3a8;font-size:12px;font-weight:850;color:#9b3b00}
-    .role-flow i{font-style:normal;color:var(--orange)}
-    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.42fr);gap:28px;align-items:end;margin-bottom:28px}
-    .section-head h2{margin-bottom:0}
-    .section-head p{margin:0;color:var(--muted)}
-    .idea-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .idea-card{display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(50,28,15,.035)}
-    .idea-card:hover{border-color:#e9aa83;transform:translateY(-1px)}
-    .idea-card h3{font-size:clamp(24px,2.5vw,34px)}
-    .idea-card .idea-subtitle{margin:-8px 0 0;color:var(--orange);font-weight:800}
-    .idea-card p{margin:0}
-    .idea-card ul{margin:0;padding-left:1.15em}
-    .idea-card li{margin:6px 0}
-    .idea-card li::marker{color:var(--orange)}
-    .idea-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
-    .idea-tags{display:flex;flex-wrap:wrap;gap:7px}
-    .idea-block{padding-top:15px;border-top:1px solid var(--line)}
-    .idea-block b{display:block;margin-bottom:5px;font-size:12px;color:#79533d;text-transform:uppercase;letter-spacing:.08em}
-    .idea-value{margin-top:auto;background:var(--soft);border-radius:14px;padding:14px 16px}
-    .idea-value b{color:var(--orange)}
-    .product-group{margin-top:34px}
-    .product-group:first-of-type{margin-top:0}
-    .product-group-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-    .product-group-title span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900}
-    .product-group-title h3{font-size:26px}
-    .package-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .package-card{position:relative;overflow:hidden}
-    .package-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange)}
-    .package-number{font-family:var(--display);font-weight:900;font-size:13px;color:var(--orange);letter-spacing:.12em;text-transform:uppercase}
-    .package-card h3{margin:8px 0 10px}
-    .package-card ul{padding-left:1.1em;margin-bottom:0}
-    .package-card li::marker{color:var(--orange)}
-    .experience-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .experience-card{min-height:210px}
-    .experience-index{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--soft);color:var(--orange);font-weight:900;margin-bottom:20px}
-    .experience-card h3{font-size:23px;margin-bottom:10px}
-    .architecture{display:grid;grid-template-columns:repeat(7,minmax(150px,1fr));gap:10px;overflow-x:auto;padding-bottom:8px}
-    .architecture-card{min-width:150px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
-    .architecture-card b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;margin-bottom:14px}
-    .architecture-card strong{display:block;font-family:var(--display);font-size:18px;margin-bottom:7px}
-    .architecture-card small{color:var(--muted);font-size:13px}
-    .handoff-box{margin-top:20px;background:#17191f;color:#f5f2ed;border-radius:22px;padding:24px;display:grid;grid-template-columns:.7fr 1.3fr;gap:24px}
-    .handoff-box h3{color:#fff;margin-bottom:10px}
-    .handoff-box p{color:#c9cbd1}
-    .handoff-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-    .handoff-fields span{padding:9px 11px;border-radius:10px;background:#252830;border:1px solid #383c46;font-size:13px}
-    .priority-table{overflow:auto;border:1px solid var(--line);border-radius:18px;background:#fff}
-    .priority-table table{min-width:900px}
-    .priority-badge.p0{background:#17191f;color:#fff}.priority-badge.p1{background:var(--orange);color:#fff}.priority-badge.p2{background:var(--soft);color:#b74400}.priority-badge.p3{background:#eff0f3;color:#5c626d}
-    .roadmap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .roadmap-step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
-    .roadmap-time{font-weight:900;color:var(--orange);text-transform:uppercase;letter-spacing:.08em;font-size:12px}
-    .roadmap-step h3{font-size:24px;margin:10px 0 12px}
-    .roadmap-step ul{padding-left:1.1em;margin:0}
-    .roadmap-step li{margin:6px 0}
-    .roadmap-step li::marker{color:var(--orange)}
-    .idea-template{display:grid;grid-template-columns:.75fr 1.25fr;gap:18px}
-    .template-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-    .template-field{padding:13px 14px;border-radius:13px;background:#fff;border:1px solid var(--line)}
-    .template-field b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:3px}
-    .final-focus{background:linear-gradient(135deg,#f15a00,#b83d00);color:#fff;border-radius:28px;padding:clamp(28px,5vw,58px);position:relative;overflow:hidden}
-    .final-focus:after{content:"";position:absolute;right:-110px;top:-120px;width:330px;height:330px;border-radius:50%;border:60px solid rgba(255,255,255,.1)}
-    .final-focus h2{color:#fff;max-width:980px}
-    .final-focus p{color:#fff4ed;max-width:900px;font-size:19px}
-    .final-focus .focus-flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-    .final-focus .focus-flow span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:9px 12px;font-weight:800}
-    @media(max-width:1180px){
-      .experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .package-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-    @media(max-width:900px){
-      .future-nav{position:static}
-      .future-intro,.north-star,.section-head,.handoff-box,.idea-template{grid-template-columns:1fr}
-      .idea-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:680px){
-      .package-grid,.experience-grid,.roadmap,.template-fields{grid-template-columns:1fr}
-      .future-page .hero h1{font-size:clamp(43px,15vw,68px)}
-      .idea-card{padding:21px}
-      .handoff-fields{grid-template-columns:1fr}
-    }
+    .future-page{--dark:#17191f}.future-page .hero{padding-bottom:30px}.future-page .lead{max-width:1080px}.future-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 42px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:18px;position:sticky;top:78px;z-index:8}.future-nav a{padding:9px 12px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:750}.future-nav a:hover{background:var(--soft);color:var(--orange)}.section-head{display:grid;grid-template-columns:1fr minmax(260px,.45fr);gap:24px;align-items:end;margin-bottom:25px}.section-head p{margin:0;color:var(--muted)}.north-star{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.north-main{background:linear-gradient(135deg,#fff,#fff3e9);border:1px solid #efc3a8;border-radius:26px;padding:clamp(25px,4vw,43px)}.north-side{display:grid;gap:14px}.dark-card{background:linear-gradient(145deg,#17191f,#2a2e38);color:#fff;border:0}.dark-card h3{color:#fff}.dark-card p,.dark-card li{color:#d8dae0}.scenario-list{display:grid;gap:9px;margin-top:22px}.scenario{padding:13px 15px;background:#fff;border:1px solid var(--line);border-radius:13px;font-weight:700}.role-flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:22px}.role-flow span{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid #efc3a8;color:#9b3b00;font-size:12px;font-weight:850}.role-flow i{font-style:normal;color:var(--orange)}.infographic{background:linear-gradient(180deg,#fff,#fff8f2);border:1px solid var(--line);border-radius:28px;padding:24px;overflow:auto}.flow{display:grid;grid-template-columns:repeat(8,minmax(175px,1fr));gap:14px;min-width:1480px}.flow-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:19px;padding:18px}.flow-card:after{content:'→';position:absolute;right:-14px;top:48%;transform:translateY(-50%);font-size:27px;font-weight:900;color:var(--orange)}.flow-card:last-child:after{display:none}.flow-card small{display:block;color:var(--orange);font-weight:850;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.flow-card strong{display:block;font-family:var(--display);font-size:19px;margin-bottom:7px}.flow-card p{margin:0;color:var(--muted);font-size:14px}.flow-card.loop{background:linear-gradient(145deg,#17191f,#2a2f3b);border:0}.flow-card.loop small,.flow-card.loop strong{color:#fff}.flow-card.loop p{color:#d7d9de}.service-loop{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.idea-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.idea{display:flex;flex-direction:column;gap:13px;padding:23px;background:#fff;border:1px solid var(--line);border-radius:21px}.idea h3{font-size:clamp(23px,2.3vw,32px)}.subtitle{color:var(--orange);font-weight:800;margin-top:-7px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{padding:6px 8px;border-radius:999px;background:var(--soft);color:var(--orange);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.tag.dark{background:#17191f;color:#fff}.idea-block{padding-top:12px;border-top:1px solid var(--line)}.idea-block b{display:block;margin-bottom:5px;color:#76513c;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.idea-block p,.idea-block ul{margin:0}.idea-block ul{padding-left:1.1em}.idea-value{margin-top:auto;padding:13px 15px;background:var(--soft);border-radius:13px}.idea-value b{color:var(--orange)}.package-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.package{position:relative;overflow:hidden}.package:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange)}.package small{color:var(--orange);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.package h3{margin:8px 0 10px}.package ul{padding-left:1.1em;margin-bottom:0}.architecture{display:grid;grid-template-columns:repeat(7,minmax(150px,1fr));gap:10px;overflow:auto}.arch{min-width:150px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}.arch b{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--orange);color:#fff;margin-bottom:13px}.arch strong{display:block;font-family:var(--display);font-size:17px;margin-bottom:6px}.arch span{color:var(--muted);font-size:13px}.handoff{margin-top:18px;display:grid;grid-template-columns:.7fr 1.3fr;gap:20px;padding:23px;border-radius:21px;background:#17191f;color:#fff}.handoff h3{color:#fff}.handoff p{color:#c9cbd1}.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.fields span{padding:9px 11px;border-radius:9px;background:#272a32;border:1px solid #393d47;font-size:13px}.priority-table{overflow:auto;border:1px solid var(--line);border-radius:18px}.priority-table table{min-width:850px}.badge{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:850}.p0{background:#17191f;color:#fff}.p1{background:var(--orange);color:#fff}.p2{background:var(--soft);color:#b74400}.p3{background:#eff0f3;color:#5c626d}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.road-step{padding:21px;background:#fff;border:1px solid var(--line);border-radius:19px}.road-step small{color:var(--orange);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.road-step h3{font-size:23px;margin:8px 0 10px}.road-step ul{padding-left:1.1em;margin:0}.final{padding:clamp(30px,5vw,57px);border-radius:27px;background:linear-gradient(135deg,#f15a00,#b83d00);color:#fff}.final h2,.final p,.final li{color:#fff}.final ul{padding-left:1.1em}@media(max-width:1120px){.section-head,.north-star,.handoff{grid-template-columns:1fr}.idea-grid{grid-template-columns:1fr}.package-grid,.roadmap{grid-template-columns:repeat(2,1fr)}.service-loop{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.future-nav{position:static}.package-grid,.roadmap,.service-loop,.fields{grid-template-columns:1fr}.infographic{padding:17px}}
   </style>
 </head>
-<body data-root="../">
+<body data-root="../" class="future-page">
 <div class="app">
-  <aside class="sidebar">
-    <a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a>
-    <nav class="nav" data-nav></nav>
-    <div class="sidebar-foot">Spolek.ai Operating System</div>
-  </aside>
-
+  <aside class="sidebar"><a class="logo" href="../index.html"><img src="../assets/logos/spolek-ai-logo.svg" alt="Spolek.ai"></a><nav class="nav" data-nav></nav><div class="sidebar-foot">Spolek.ai Operating System</div></aside>
   <div class="main">
-    <header class="topbar">
-      <input class="search" data-search placeholder="Hledat ve Spolek.ai OS…">
-      <span class="version">Future Ideas • 03/08/2026</span>
-    </header>
+    <header class="topbar"><input class="search" data-search placeholder="Hledat ve Spolek.ai OS…"><span class="version">Future Ideas</span></header>
     <div class="search-panel" data-search-panel></div>
+    <main class="page"><div class="wrap">
+      <section class="hero">
+        <div class="eyebrow">Roadmap / Product Lab / Budoucnost</div>
+        <h1>Budoucí nápady SAOS</h1>
+        <p class="lead">Živý plán produktů, služeb, automatizací a technologických vrstev, ze kterých budeme postupně vytvářet lepší marketingové služby pro živnostníky, firmy i velké podniky.</p>
+        <div class="actions"><a class="btn primary" href="#priority">Co stavět první</a><a class="btn" href="#infographic">Infografika systému</a><a class="btn" href="presentation/">Otevřít prezentaci</a></div>
+      </section>
+      <nav class="future-nav"><a href="#north-star">Growth Twin</a><a href="#infographic">Infografika</a><a href="#ideas">Nápady</a><a href="#services">Služby</a><a href="#architecture">Architektura</a><a href="#priority">Priority</a><a href="#roadmap">Roadmapa</a><a href="presentation/">Prezentace</a></nav>
 
-    <main class="page future-page">
-      <div class="wrap">
-        <section class="hero">
-          <div class="eyebrow">Roadmap / Product Lab / Budoucnost</div>
-          <h1>Budoucí nápady SAOS</h1>
-          <p class="lead">Živý zásobník budoucích produktů, služeb, automatizací a technologických vrstev Spolek.ai. Nápady jsou rozdělené tak, aby z nich bylo možné vytvářet konkrétní nástroje, pilotní projekty a následně opakovatelné služby pro živnostníky, firmy i velké podniky.</p>
-          <div class="future-meta">
-            <span class="status">Živý dokument</span>
-            <span>Aktualizováno 3. srpna 2026</span>
-            <span>Vlastník: MAX / Produktové řízení</span>
-            <span>Stav: návrhy nejsou automaticky závaznou roadmapou</span>
+      <section class="section" id="north-star">
+        <div class="section-head"><div><div class="eyebrow">Hlavní směr</div><h2>Spolek Growth Twin</h2></div><p>Digitální dvojče marketingu, obchodu a růstu firmy. Ne další chatbot, ale systém propojující data, rozhodování, realizaci a měřitelný dopad.</p></div>
+        <div class="north-star">
+          <article class="north-main">
+            <p class="lead">Growth Twin má odpovídat na praktické otázky: kde firmě utíkají peníze, co má změnit, co má nasadit a zda se změna skutečně projevila v zisku.</p>
+            <div class="scenario-list"><div class="scenario">Které kampaně vytvářejí obrat, ale ne skutečný zisk?</div><div class="scenario">Kde lze během 30 dní zachránit poptávky nebo objednávky?</div><div class="scenario">Jaký dopad bude mít změna rozpočtu, nabídky nebo webu?</div><div class="scenario">Které zákaznické segmenty mají nejvyšší dlouhodobou hodnotu?</div></div>
+            <div class="role-flow"><span>SPIKE</span><i>→</i><span>ROOT</span><i>→</i><span>NEXUS</span><i>→</i><span>PIXIE</span><i>→</i><span>WAVE</span><i>→</i><span>ORBIT</span><i>→</i><span>MAX</span><i>→</i><span>Servisní smyčka</span></div>
+          </article>
+          <div class="north-side">
+            <article class="card dark-card"><h3>Nepřidávat další postavy</h3><p>Sedm rolí stačí. Další vývoj má jít do nástrojů, integrací, klientského portálu a opakovatelných služeb.</p><ul><li>méně vysvětlovat role, více ukazovat výsledky,</li><li>méně mluvit o AI, více o penězích a procesech,</li><li>každé tvrzení dokládat daty a zdroji.</li></ul></article>
+            <article class="card"><h3>Co musí klient vždy vědět</h3><p>Co dostane, jak rychle, z jakých dat, co se provede automaticky, co musí schválit a jak pozná dosažený výsledek.</p></article>
           </div>
-          <div class="actions">
-            <a class="btn primary" href="#priority">Co stavět jako první</a>
-            <a class="btn" href="#products">Katalog budoucích produktů</a>
-            <a class="btn ghost" href="#roadmap">Roadmapa 12 měsíců</a>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <nav class="future-nav" aria-label="Navigace budoucích nápadů">
-          <a href="#direction">Směr</a>
-          <a href="#north-star">Growth Twin</a>
-          <a href="#products">Produkty</a>
-          <a href="#packages">Služby</a>
-          <a href="#experience">Klientský zážitek</a>
-          <a href="#architecture">Architektura</a>
-          <a href="#priority">Priority</a>
-          <a href="#roadmap">Roadmapa</a>
-          <a href="#idea-template">Evidence nápadů</a>
-        </nav>
+      <section class="section" id="infographic">
+        <div class="section-head"><div><div class="eyebrow">Grafická infografika</div><h2>Celý průběh systému a následného servisu</h2></div><p>Spolupráce nekončí odevzdáním kampaně. Výsledky se vracejí zpět do systému a spouštějí další optimalizační cyklus.</p></div>
+        <div class="infographic"><div class="flow">
+          <article class="flow-card"><small>Vstup</small><strong>1. Firemní data</strong><p>Web, reklamy, CRM, e-shop, finance, zákaznická péče a provozní omezení.</p></article>
+          <article class="flow-card"><small>SPIKE</small><strong>2. Audit</strong><p>Úniky peněz, chyby měření, slabá místa a nevyužité příležitosti.</p></article>
+          <article class="flow-card"><small>ROOT</small><strong>3. Důkazy</strong><p>Zdroje pravdy, verze, schválená tvrzení, historie a rozhodnutí.</p></article>
+          <article class="flow-card"><small>NEXUS</small><strong>4. Strategie</strong><p>Priority, scénáře, rozpočet, KPI, rizika a plán realizace.</p></article>
+          <article class="flow-card"><small>PIXIE</small><strong>5. Produkce</strong><p>Obsah, kreativy, weby, nabídky, videa a testovací varianty.</p></article>
+          <article class="flow-card"><small>WAVE</small><strong>6. Distribuce</strong><p>Reklamy, web, sociální sítě, e-mail, CRM a další kanály.</p></article>
+          <article class="flow-card"><small>ORBIT + MAX</small><strong>7. Měření a řízení</strong><p>Zisk, výsledky, schvalování, úkoly, kapacity, rizika a další rozhodnutí.</p></article>
+          <article class="flow-card loop"><small>Trvalý servis</small><strong>8. Optimalizace</strong><p>Údržba, nové experimenty, opravy, aktualizace a další růstové cykly.</p></article>
+        </div></div>
+        <div class="service-loop"><article class="card"><h3>Servis</h3><p>Kontrola měření, kampaní, datových zdrojů a automatizací.</p></article><article class="card"><h3>Optimalizace</h3><p>Vylepšování webu, nabídek, komunikace a distribuce.</p></article><article class="card"><h3>Experimenty</h3><p>Průběžné testování nových hypotéz a variant.</p></article><article class="card"><h3>Retence</h3><p>Systém roste společně s firmou a nepřestává po prvním projektu.</p></article></div>
+      </section>
 
-        <section class="section" id="direction">
-          <div class="future-intro">
-            <article class="card future-callout">
-              <div class="eyebrow">Zásadní produktové rozhodnutí</div>
-              <div class="future-highlight">Nepřidávat další postavy. Proměnit současných sedm rolí ve skutečné pracovní moduly.</div>
-              <p>Spolek.ai už má dostatečně silnou sestavu: ROOT, SPIKE, NEXUS, PIXIE, WAVE, ORBIT a MAX. Další rozvoj nesmí stát na vymýšlení dalších jmen, ale na propojení firemních dat, rozhodování, realizace, kontroly a měřitelného ekonomického výsledku.</p>
-              <p><strong>Hlavní odlišení:</strong> Spolek.ai není sada chatbotů ani továrna na příspěvky. Je to řízené externí AI marketingové oddělení, které najde problém, doloží ho, navrhne řešení, provede schválenou akci a změří skutečný dopad na firmu.</p>
-            </article>
+      <section class="section" id="ideas">
+        <div class="section-head"><div><div class="eyebrow">Produktový katalog</div><h2>Budoucí nástroje a služby</h2></div><p>Každý nápad je vysvětlený stejnou strukturou: co je, jak funguje, proč ho chceme a jakou má obchodní hodnotu.</p></div>
+        <div class="idea-grid">
+          <article class="idea"><div class="tags"><span class="tag dark">P0</span><span class="tag">SPIKE</span></div><h3>SPIKE Always-On</h3><div class="subtitle">Nepřetržitý detektor úniků peněz</div><div class="idea-block"><b>Co to je</b><p>Pravidelný dohled nad kampaněmi, měřením, formuláři, náklady a obchodními toky.</p></div><div class="idea-block"><b>Jak funguje</b><p>Vyhledává anomálie, označuje jejich závažnost a posílá konkrétní doporučení MAXovi a klientovi.</p></div><div class="idea-block"><b>Proč</b><p>Z jednorázového auditu se stává živá služba, která průběžně chrání rozpočet.</p></div><div class="idea-value"><b>Hodnota:</b> klient okamžitě chápe, že systém hlídá jeho peníze.</div></article>
+          <article class="idea"><div class="tags"><span class="tag dark">P0</span><span class="tag">SPIKE • WAVE • ORBIT</span></div><h3>Revenue Rescue</h3><div class="subtitle">Záchrana ztracených tržeb</div><div class="idea-block"><b>Co to je</b><p>Detekce opuštěných košíků, nevyřízených leadů, starých nabídek a zákazníků před opakovaným nákupem.</p></div><div class="idea-block"><b>Jak funguje</b><p>Systém najde ztrátu, připraví záchrannou sekvenci, po schválení ji nasadí a změří zachráněné peníze.</p></div><div class="idea-block"><b>Proč</b><p>Výsledek je konkrétní, srozumitelný a přímo měřitelný.</p></div><div class="idea-value"><b>Hodnota:</b> ideální první placený sprint.</div></article>
+          <article class="idea"><div class="tags"><span class="tag dark">P0</span><span class="tag">ORBIT</span></div><h3>Profit-Aware Marketing</h3><div class="subtitle">Marketing řízený ziskem</div><div class="idea-block"><b>Co to je</b><p>Analytika propojující reklamu s marží, slevami, vratkami, kapacitou a opakovanými nákupy.</p></div><div class="idea-block"><b>Jak funguje</b><p>Kampaně nehodnotí jen podle kliknutí a ROAS, ale podle skutečného ekonomického přínosu.</p></div><div class="idea-block"><b>Proč</b><p>Tohle odlišuje SAOS od běžné agentury nebo reklamního dashboardu.</p></div><div class="idea-value"><b>Hodnota:</b> silný argument pro e-shopy i B2B firmy.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P1</span><span class="tag">NEXUS • PIXIE • ORBIT</span></div><h3>Experiment Factory</h3><div class="subtitle">Továrna na růstové experimenty</div><div class="idea-block"><b>Co to je</b><p>Systém navrhující testy webu, nabídky, cen, komunikace, kreativy a distribuce.</p></div><div class="idea-block"><b>Jak funguje</b><p>NEXUS vytvoří hypotézu, PIXIE varianty, WAVE nasazení a ORBIT vyhodnocení.</p></div><div class="idea-block"><b>Proč</b><p>Trvalé zlepšování musí být součást systému, ne náhodný nápad jednou za rok.</p></div><div class="idea-value"><b>Hodnota:</b> každý měsíc vznikají nové ověřitelné příležitosti.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P2</span><span class="tag">ROOT • NEXUS • PIXIE</span></div><h3>Customer Voice Intelligence</h3><div class="subtitle">Radar hlasu zákazníků</div><div class="idea-block"><b>Co to je</b><p>Analýza telefonátů, e-mailů, recenzí, chatů, reklamací a obchodních poznámek.</p></div><div class="idea-block"><b>Jak funguje</b><p>Seskupuje námitky, problémy a nové potřeby a předává je do strategie, webu a obsahu.</p></div><div class="idea-block"><b>Proč</b><p>Firma začne komunikovat jazykem zákazníků, ne vlastních interních domněnek.</p></div><div class="idea-value"><b>Hodnota:</b> zlepšuje marketing, produkt i zákaznickou zkušenost.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P2</span><span class="tag">SPIKE • ROOT • ORBIT</span></div><h3>AI Visibility Radar</h3><div class="subtitle">Viditelnost značky v AI odpovědích</div><div class="idea-block"><b>Co to je</b><p>Monitoring zmínek firmy a konkurence v ChatGPT, Gemini, Perplexity a dalších AI rozhraních.</p></div><div class="idea-block"><b>Jak funguje</b><p>Testuje definované dotazy, ukládá výsledky a navrhuje obsahové a znalostní úpravy.</p></div><div class="idea-block"><b>Proč</b><p>Firmy budou stále více řešit, zda je AI doporučuje a zda o nich uvádí správná data.</p></div><div class="idea-value"><b>Hodnota:</b> atraktivní nová služba navazující na SEO a reputaci.</div></article>
+          <article class="idea"><div class="tags"><span class="tag dark">P0</span><span class="tag">ROOT</span></div><h3>ROOT Evidence Graph</h3><div class="subtitle">Důkazní vrstva proti AI nesmyslům</div><div class="idea-block"><b>Co to je</b><p>Zdroje, data, verze, vlastníci a úroveň důvěry pro každé důležité firemní tvrzení.</p></div><div class="idea-block"><b>Jak funguje</b><p>Každý výstup lze dohledat ke zdroji a změna informace se propíše do navazujících výstupů.</p></div><div class="idea-block"><b>Proč</b><p>Bez důkazní vrstvy může AI sebevědomě publikovat zastaralé nebo nepravdivé informace.</p></div><div class="idea-value"><b>Hodnota:</b> zásadní důvěryhodnost a bezpečnost systému.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P3</span><span class="tag">MAX • ROOT</span></div><h3>AI Trust Layer</h3><div class="subtitle">Governance, pravidla a schvalování</div><div class="idea-block"><b>Co to je</b><p>Evidence modelů, oprávnění, automatických akcí, lidského schválení a auditní stopy.</p></div><div class="idea-block"><b>Jak funguje</b><p>Citlivé kroky nelze provést bez příslušné role a každé rozhodnutí zůstává dohledatelné.</p></div><div class="idea-block"><b>Proč</b><p>Větší firmy potřebují kontrolu a odpovědnost, ne nekontrolované AI automaty.</p></div><div class="idea-value"><b>Hodnota:</b> předpoklad pro enterprise klienty.</div></article>
+          <article class="idea"><div class="tags"><span class="tag dark">P0</span><span class="tag">MAX • ORBIT</span></div><h3>Client Cockpit</h3><div class="subtitle">Jedno místo pro celý klientský přehled</div><div class="idea-block"><b>Co to je</b><p>Dashboard zdraví marketingu, kritických problémů, experimentů, výsledků a schvalování.</p></div><div class="idea-block"><b>Jak funguje</b><p>Spojí práci všech rolí do jednoho srozumitelného rozhraní pro klienta.</p></div><div class="idea-block"><b>Proč</b><p>Bez cockpitu je SAOS jen interní metodika. S cockpitom je to viditelná platforma.</p></div><div class="idea-value"><b>Hodnota:</b> zvyšuje důvěru i vnímanou cenu služby.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P2</span><span class="tag">Produkt</span></div><h3>Oborové workflow balíčky</h3><div class="subtitle">Předpřipravené modely pro konkrétní segmenty</div><div class="idea-block"><b>Co to je</b><p>Opakovatelné procesy pro e-shopy, lokální služby, vzdělávání, B2B a další obory.</p></div><div class="idea-block"><b>Jak funguje</b><p>Společné jádro SAOS se doplní o oborové KPI, kontroly, šablony a integrace.</p></div><div class="idea-block"><b>Proč</b><p>Zrychlí nasazení, sníží cenu a umožní růst bez pokaždé zcela zakázkového řešení.</p></div><div class="idea-value"><b>Hodnota:</b> škálovatelnější obchodní model.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P3</span><span class="tag">Enterprise</span></div><h3>SAOS Enterprise Private</h3><div class="subtitle">Soukromá firemní instance</div><div class="idea-block"><b>Co to je</b><p>Oddělené prostředí s vlastní značkou, daty, oprávněními, ROOTem a workflow.</p></div><div class="idea-block"><b>Jak funguje</b><p>Platforma se přizpůsobí firemní infrastruktuře, bezpečnostním pravidlům a týmům.</p></div><div class="idea-block"><b>Proč</b><p>Velké firmy potřebují kontrolu nad daty, integracemi a interními pravidly.</p></div><div class="idea-value"><b>Hodnota:</b> vysokohodnotná implementace a dlouhodobý servis.</div></article>
+          <article class="idea"><div class="tags"><span class="tag">P3</span><span class="tag">Výzkum</span></div><h3>Anonymizovaný benchmarking</h3><div class="subtitle">Porovnání se srovnatelnými firmami</div><div class="idea-block"><b>Co to je</b><p>Agregované anonymní benchmarky výkonu, konverzí, procesů a růstových problémů.</p></div><div class="idea-block"><b>Jak funguje</b><p>Klient vidí, kde je proti obdobným firmám silný, průměrný nebo výrazně slabý.</p></div><div class="idea-block"><b>Proč</b><p>Samotné číslo bez kontextu často nic neříká; benchmark dává výsledkům měřítko.</p></div><div class="idea-value"><b>Hodnota:</b> unikátní datová výhoda, ale až při dostatečném počtu klientů.</div></article>
+        </div>
+      </section>
 
-            <aside class="future-note">
-              <div class="eyebrow">Produktové pravidlo</div>
-              <h3>Každý nový nástroj musí uzavřít celý pracovní cyklus.</h3>
-              <p><strong>Data → diagnóza → rozhodnutí → realizace → měření → poučení.</strong></p>
-              <p>Nápad, který pouze generuje další text, grafiku nebo report bez návaznosti na výsledek, není pro SAOS dostatečně silný.</p>
-            </aside>
-          </div>
-        </section>
+      <section class="section" id="services">
+        <div class="section-head"><div><div class="eyebrow">Produktizace</div><h2>Jak služby prodávat</h2></div><p>Jednotlivé moduly je potřeba zabalit do jasných služeb s konkrétním výsledkem, rozsahem a návazností.</p></div>
+        <div class="package-grid">
+          <article class="card package"><small>01 · Vstup</small><h3>SPIKE Mini Scan</h3><p>Rychlé skóre, tři hlavní slabiny, jeden pravděpodobný únik a doporučený další krok.</p></article>
+          <article class="card package"><small>02 · Audit</small><h3>SPIKE 360 Audit</h3><p>Hloubková diagnostika dat, marketingu, procesů, aktiv a finančních úniků.</p></article>
+          <article class="card package"><small>03 · Strategie</small><h3>NEXUS Growth Blueprint</h3><p>Priority, rozpočet, KPI, rizika a konkrétní plán prvních 90 dní.</p></article>
+          <article class="card package"><small>04 · Sprint</small><h3>Revenue Rescue Sprint</h3><p>Třicetidenní zásah zaměřený na zachránění poptávek, objednávek a opakovaných nákupů.</p></article>
+          <article class="card package"><small>05 · Servis</small><h3>Externí AI marketingové oddělení</h3><p>Pravidelný audit, strategie, produkce, distribuce, experimenty a vyhodnocování.</p></article>
+          <article class="card package"><small>06 · Enterprise</small><h3>SAOS Enterprise Private</h3><p>Vlastní instance, integrace, oprávnění, governance, školení a dlouhodobý provoz.</p></article>
+        </div>
+      </section>
 
-        <section class="section" id="north-star">
-          <div class="north-star">
-            <article class="north-star-main">
-              <div class="eyebrow">North Star Product</div>
-              <h2>Spolek Growth Twin</h2>
-              <p class="lead">Digitální dvojče marketingu, obchodu a růstového systému firmy. Nezobrazuje pouze minulost, ale modeluje možné budoucí scénáře a doporučuje další nejlepší krok.</p>
-              <div class="scenario-list">
-                <div class="scenario">Co se stane, když přesuneme 20 % rozpočtu z Meta Ads do Google Ads?</div>
-                <div class="scenario">Které produkty mají vysoký obrat, ale po započtení reklamy, slev a vratek nízký nebo záporný zisk?</div>
-                <div class="scenario">Kde může firma získat dalších 300 000 Kč obratu bez zvýšení reklamního rozpočtu?</div>
-                <div class="scenario">Které zákazníky má firma oslovit znovu, kdy a s jakou nabídkou?</div>
-              </div>
-              <div class="role-flow" aria-label="Tok rolí Growth Twin">
-                <span>ROOT</span><i>→</i><span>SPIKE</span><i>→</i><span>NEXUS</span><i>→</i><span>PIXIE</span><i>→</i><span>WAVE</span><i>→</i><span>ORBIT</span><i>→</i><span>MAX</span>
-              </div>
-            </article>
+      <section class="section" id="architecture">
+        <div class="section-head"><div><div class="eyebrow">Technické jádro</div><h2>Sedm vrstev platformy</h2></div><p>Bez společné architektury by vznikla jen sada oddělených agentů a dashboardů.</p></div>
+        <div class="architecture"><article class="arch"><b>1</b><strong>Konektory</strong><span>Web, reklamy, CRM, e-shop, dokumenty a finance.</span></article><article class="arch"><b>2</b><strong>Datová vrstva</strong><span>Sjednocení zákazníků, produktů, kampaní a výsledků.</span></article><article class="arch"><b>3</b><strong>ROOT</strong><span>Znalosti, důkazy, verze, citace a rozhodnutí.</span></article><article class="arch"><b>4</b><strong>Workflow</strong><span>Standardizované předávání práce mezi rolemi.</span></article><article class="arch"><b>5</b><strong>Schvalování</strong><span>Práva, lidská kontrola a auditní stopa.</span></article><article class="arch"><b>6</b><strong>ORBIT</strong><span>Měření zisku, experimentů a dlouhodobého dopadu.</span></article><article class="arch"><b>7</b><strong>Client Cockpit</strong><span>Jedno rozhraní pro klienta, tým a rozhodování.</span></article></div>
+        <div class="handoff"><div><h3>Role si nesmějí předávat chaos</h3><p>Každé předání musí mít pevnou strukturu, aby šlo systém automatizovat, auditovat a škálovat.</p></div><div class="fields"><span>Problém</span><span>Důkaz</span><span>Zdroj dat</span><span>Závažnost</span><span>Finanční dopad</span><span>Spolehlivost</span><span>Omezení</span><span>Nevyřešené otázky</span></div></div>
+      </section>
 
-            <div class="north-star-side">
-              <article class="card">
-                <div class="eyebrow">Vstupní data</div>
-                <h3>Co musí dvojče znát</h3>
-                <div class="pills">
-                  <div class="pill">Prodeje, objednávky, marže a vratky</div>
-                  <div class="pill">Webová analytika a reklamní systémy</div>
-                  <div class="pill">CRM, obchodní případy a reakční doba</div>
-                  <div class="pill">Produkty, ceny, sklad a kapacity</div>
-                  <div class="pill">Obsah, e-maily, hovory, recenze a podpora</div>
-                </div>
-              </article>
-              <article class="card">
-                <div class="eyebrow">Výstup</div>
-                <h3>Rozhodnutí, ne další dashboard</h3>
-                <p>Každý scénář musí obsahovat očekávaný dopad, potřebné náklady, míru jistoty, rizika, závislosti, doporučený postup a pravidla zastavení.</p>
-              </article>
-            </div>
-          </div>
-        </section>
+      <section class="section" id="priority">
+        <div class="section-head"><div><div class="eyebrow">Prioritizace</div><h2>Co stavět nejdřív</h2></div><p>Nejprve musí vzniknout prodejný základ s viditelným výsledkem. Až potom další atraktivní vrstvy.</p></div>
+        <div class="priority-table"><table class="table"><thead><tr><th>Priorita</th><th>Obsah</th><th>Důvod</th></tr></thead><tbody><tr><td><span class="badge p0">P0</span></td><td>SPIKE 360, Revenue Rescue, ORBIT Profit Dashboard, Client Cockpit minimum</td><td>První jasně prodejný celek.</td></tr><tr><td><span class="badge p1">P1</span></td><td>SPIKE Always-On, ROOT Evidence Graph, MAX approvals, Experiment Factory light</td><td>Vznik živého servisního systému.</td></tr><tr><td><span class="badge p2">P2</span></td><td>Customer Voice, AI Visibility Radar, oborové workflow</td><td>Rozšíření a specializace nabídky.</td></tr><tr><td><span class="badge p3">P3</span></td><td>AI Trust Layer, Enterprise Private, benchmarking</td><td>Vyšší komplexita po ověření základu.</td></tr></tbody></table></div>
+      </section>
 
-        <section class="section" id="products">
-          <div class="section-head">
-            <div><div class="eyebrow">Product Backlog</div><h2>Katalog budoucích produktů</h2></div>
-            <p>Každý produkt je navržen jako samostatně prodejná služba nebo modul SAOS. U každého je uveden účel, minimální verze a hlavní přínos.</p>
-          </div>
+      <section class="section" id="roadmap">
+        <div class="section-head"><div><div class="eyebrow">Roadmapa</div><h2>Doporučený postup na 12 měsíců</h2></div><p>Roadmapa jde od prvního produktu přes pilotní klienty až k živé platformě a enterprise vrstvě.</p></div>
+        <div class="roadmap"><article class="road-step"><small>0–30 dní</small><h3>Základ</h3><ul><li>SPIKE Mini Scan,</li><li>demo Client Cockpit,</li><li>přesný produkt SPIKE 360.</li></ul></article><article class="road-step"><small>31–90 dní</small><h3>Piloty</h3><ul><li>3 pilotní klienti,</li><li>ROOT minimum,</li><li>ORBIT dashboard,</li><li>Revenue Rescue.</li></ul></article><article class="road-step"><small>3–6 měsíců</small><h3>Servisní smyčka</h3><ul><li>SPIKE Always-On,</li><li>Experiment Factory light,</li><li>Customer Voice,</li><li>Client Cockpit základ.</li></ul></article><article class="road-step"><small>6–12 měsíců</small><h3>Platforma</h3><ul><li>Growth Twin,</li><li>AI Visibility Radar,</li><li>oborové workflow,</li><li>enterprise governance.</li></ul></article></div>
+      </section>
 
-          <div class="product-group">
-            <div class="product-group-title"><span>A</span><h3>Růst, zisk a automatická náprava</h3></div>
-            <div class="idea-grid">
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-priority">Priorita P0</span><div class="idea-tags"><span class="idea-role">SPIKE</span><span class="idea-role">ORBIT</span></div></div>
-                <h3>SPIKE Always-On</h3>
-                <p class="idea-subtitle">Nepřetržitý detektor úniků peněz a provozních chyb</p>
-                <div class="idea-block"><b>Co hlídá</b><ul><li>kampaně bez správného měření a prudké změny ceny za konverzi,</li><li>reklamu na produkty s nízkou marží nebo nedostupným skladem,</li><li>rozbité formuláře, nevyřízené leady a nefunkční automatizace,</li><li>propady konverzí, zbytečné licence a duplicitní nástroje.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Denní nebo týdenní sada automatických kontrol, důkazy, závažnost problému, odhad finančního dopadu a přidělení vlastníka nápravy.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Firma se dozví, kde právě teď zbytečně ztrácí peníze, ne až v měsíčním reportu.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-priority">Priorita P0</span><div class="idea-tags"><span class="idea-role">WAVE</span><span class="idea-role">ORBIT</span></div></div>
-                <h3>Revenue Rescue</h3>
-                <p class="idea-subtitle">Automatická záchrana ztracených tržeb</p>
-                <div class="idea-block"><b>Co vyhledává</b><ul><li>opuštěné košíky a nedokončené objednávky,</li><li>poptávky a nabídky bez následné reakce,</li><li>zákazníky před očekávaným opakovaným nákupem,</li><li>zákazníky s rizikem odchodu a nevyužitý cross-sell.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Jeden vybraný zdroj ztracených příležitostí, schvalovaná personalizovaná reakce a dashboard zachráněného obratu.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Velmi snadno pochopitelná služba s přímou vazbou na peníze.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-priority">Priorita P0</span><div class="idea-tags"><span class="idea-role">ORBIT</span><span class="idea-role">NEXUS</span></div></div>
-                <h3>Profit-Aware Marketing</h3>
-                <p class="idea-subtitle">Marketing řízený skutečným ziskem, ne kliknutím</p>
-                <div class="idea-block"><b>Co započítává</b><ul><li>marži, slevy, dopravu, vratky a obchodní náklady,</li><li>opakované nákupy a dlouhodobou hodnotu zákazníka,</li><li>skutečně uhrazené faktury a kvalitu leadů,</li><li>kapacitu skladu, výroby a obchodního týmu.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Napojení reklamních nákladů na objednávky a produktovou marži. Výstupem bude ziskovost kampaní, produktů a segmentů.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Odhalí kampaně, které vypadají úspěšně podle ROAS, ale firmě ve skutečnosti nevydělávají.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-next">Priorita P1</span><div class="idea-tags"><span class="idea-role">NEXUS</span><span class="idea-role">PIXIE</span><span class="idea-role">ORBIT</span></div></div>
-                <h3>SAOS Experiment Factory</h3>
-                <p class="idea-subtitle">Průběžná továrna na měřitelné růstové experimenty</p>
-                <div class="idea-block"><b>Co testuje</b><ul><li>claimy, nabídky, ceny, balíčky a landing pages,</li><li>nové segmenty, remarketing a follow-up komunikaci,</li><li>grafiku, video, obsah, pořadí produktů a košík,</li><li>hypotézy vycházející z reálných firemních dat.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Měsíční seznam experimentů se skóre dopadu, náročnosti a jistoty. Jeden experiment bude připraven, spuštěn a vyhodnocen od začátku do konce.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Firma se nezastaví u jedné strategie, ale buduje systematický motor neustálého zlepšování.</div>
-              </article>
-            </div>
-          </div>
-
-          <div class="product-group">
-            <div class="product-group-title"><span>B</span><h3>Inteligence zákazníků, trhu a značky</h3></div>
-            <div class="idea-grid">
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-next">Priorita P1</span><div class="idea-tags"><span class="idea-role">ROOT</span><span class="idea-role">NEXUS</span><span class="idea-role">PIXIE</span></div></div>
-                <h3>Customer Voice Intelligence</h3>
-                <p class="idea-subtitle">Radar skutečného hlasu zákazníků</p>
-                <div class="idea-block"><b>Zdroje</b><ul><li>telefonní hovory, e-maily, chaty a obchodní zápisy,</li><li>recenze, komentáře, reklamace a vratky,</li><li>důvody odmítnutí nabídek a dotazy na podporu.</li></ul></div>
-                <div class="idea-block"><b>Výstupy</b><p>Námitky, nepochopené produkty, chybějící informace, nová poptávka, jazyk zákazníků a rozdíl mezi tím, co firma tvrdí, a tím, co lidé skutečně vnímají.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Zpětná vazba se automaticky promění v úpravu nabídky, webu, obsahu a kampaní.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-next">Priorita P1</span><div class="idea-tags"><span class="idea-role">SPIKE</span><span class="idea-role">PIXIE</span><span class="idea-role">WAVE</span></div></div>
-                <h3>AI Visibility Radar</h3>
-                <p class="idea-subtitle">Viditelnost firmy v odpovědích ChatGPT, Gemini, Perplexity a dalších AI systémů</p>
-                <div class="idea-block"><b>Co měří</b><ul><li>zda a jak AI systémy značku zmiňují,</li><li>které konkurenty doporučují místo ní,</li><li>z jakých zdrojů čerpají a kde značka chybí,</li><li>zastaralé, nepřesné nebo negativní informace.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Sada obchodně důležitých dotazů, pravidelné měření odpovědí a konkrétní backlog úprav webu, zdrojů a odborného obsahu.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Není to pouze další SEO report. Zjištění se automaticky převádí na práci PIXIE, WAVE a ROOTU.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-next">Priorita P1</span><div class="idea-tags"><span class="idea-role">ROOT</span></div></div>
-                <h3>ROOT Evidence Graph</h3>
-                <p class="idea-subtitle">Důkazní vrstva a firemní paměť proti AI nesmyslům</p>
-                <div class="idea-block"><b>Každé tvrzení eviduje</b><ul><li>zdroj, datum, vlastníka a platnou verzi,</li><li>míru důvěry a případná omezení,</li><li>kdo informaci schválil,</li><li>ve kterých výstupech byla použita.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Schválená databáze firemních faktů, produktových tvrzení a pravidel značky s citací zdroje v každém důležitém AI výstupu.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Firma může používat AI bez toho, aby začala sebevědomě publikovat zastaralé nebo vymyšlené informace.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-later">Priorita P2</span><div class="idea-tags"><span class="idea-role">ROOT</span><span class="idea-role">MAX</span></div></div>
-                <h3>AI Trust Layer</h3>
-                <p class="idea-subtitle">Technická a provozní připravenost na bezpečné používání AI</p>
-                <div class="idea-block"><b>Co eviduje a kontroluje</b><ul><li>použité modely, zdroje dat a oprávnění,</li><li>lidské schvalování a automatická rozhodnutí,</li><li>změnovou historii a označení AI obsahu,</li><li>pravidla ochrany dat a rizikového obsahu.</li></ul></div>
-                <div class="idea-block"><b>Omezení</b><p>Neprodávat jako právní audit. Jde o technickou a provozní governance s možností návaznosti na právního partnera.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Větší firmy získají kontrolu, dohledatelnost a jasné hranice toho, co AI smí a nesmí dělat.</div>
-              </article>
-            </div>
-          </div>
-
-          <div class="product-group">
-            <div class="product-group-title"><span>C</span><h3>Platforma, klientské prostředí a škálování</h3></div>
-            <div class="idea-grid">
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-priority">Priorita P0</span><div class="idea-tags"><span class="idea-role">MAX</span><span class="idea-role">ORBIT</span></div></div>
-                <h3>SAOS Client Cockpit</h3>
-                <p class="idea-subtitle">Jedno místo pro problémy, rozhodnutí, schválení a výsledky</p>
-                <div class="idea-block"><b>Hlavní obrazovky</b><ul><li>zdraví marketingu a kritické problémy,</li><li>čekající rozhodnutí a schválení klienta,</li><li>běžící experimenty, náklady a očekávaný dopad,</li><li>skutečný přínos, aktivita rolí a historie změn.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Demonstrační dashboard s ukázkovou firmou a následně první reálná klientská instance.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Z neviditelné práce AI týmu vznikne srozumitelná a kontrolovatelná služba.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-later">Priorita P2</span><div class="idea-tags"><span class="idea-role">SAOS</span></div></div>
-                <h3>Oborové workflow balíčky</h3>
-                <p class="idea-subtitle">Předpřipravené procesy pro konkrétní typy podnikání</p>
-                <div class="idea-block"><b>První obory</b><ul><li>e-shopy a retail,</li><li>B2B služby a obchodní týmy,</li><li>lokální firmy a pobočkové sítě,</li><li>vzdělávání, kurzy a členské projekty.</li></ul></div>
-                <div class="idea-block"><b>MVP</b><p>Pro každý obor připravit datový checklist, typické problémy, doporučené KPI, automatizace a základní experimenty.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Rychlejší nasazení, nižší cena a méně generických doporučení.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-later">Priorita P2</span><div class="idea-tags"><span class="idea-role">ROOT</span><span class="idea-role">MAX</span></div></div>
-                <h3>SAOS Enterprise Private</h3>
-                <p class="idea-subtitle">Privátní instance pro větší firmy</p>
-                <div class="idea-block"><b>Součásti</b><ul><li>vlastní prostředí, značka, data a oprávnění,</li><li>interní ROOT a vlastní schvalovací workflow,</li><li>integrační API, auditní log a řízení rolí,</li><li>školení zaměstnanců a pravidla governance.</li></ul></div>
-                <div class="idea-block"><b>Obchodní model</b><p>Implementace, měsíční správa, privátní licence nebo kombinace s poradenskými službami.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Firma získá vlastní řízené AI marketingové prostředí, nikoliv přístup do sdíleného obecného nástroje.</div>
-              </article>
-
-              <article class="idea-card">
-                <div class="idea-top"><span class="idea-status status-research">Výzkum P3</span><div class="idea-tags"><span class="idea-role">ORBIT</span><span class="idea-role">ROOT</span></div></div>
-                <h3>Anonymizovaný Benchmarking</h3>
-                <p class="idea-subtitle">Porovnání firmy s podobnými podniky bez odhalení jejich dat</p>
-                <div class="idea-block"><b>Možné výstupy</b><ul><li>typická konverzní míra a cena získání zákazníka,</li><li>rychlost reakce na leady a podíl opakovaných nákupů,</li><li>nejčastější marketingové chyby v oboru,</li><li>vývoj výkonu proti anonymizovanému trhu.</li></ul></div>
-                <div class="idea-block"><b>Podmínka</b><p>Realizovat až při dostatečném počtu klientů, jasném právním rámci, kvalitní anonymizaci a srovnatelných datech.</p></div>
-                <div class="idea-value"><b>Klientská hodnota:</b> Firma zjistí nejen to, zda se zlepšuje, ale také zda jí neutíká celý trh.</div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="packages">
-          <div class="section-head">
-            <div><div class="eyebrow">Commercial Packaging</div><h2>Jak nápady proměnit v prodejné služby</h2></div>
-            <p>Klient nekupuje AI role. Kupuje jasný výsledek, termín, rozsah a způsob ověření.</p>
-          </div>
-          <div class="package-grid">
-            <article class="card package-card"><div class="package-number">01 / Vstup zdarma</div><h3>SPIKE Mini Scan</h3><p>Interaktivní diagnostika s okamžitým orientačním výsledkem.</p><ul><li>15–25 otázek,</li><li>skóre marketingové připravenosti,</li><li>tři největší slabiny,</li><li>jeden odhadovaný únik,</li><li>doporučený další krok.</li></ul></article>
-            <article class="card package-card"><div class="package-number">02 / Audit</div><h3>SPIKE 360 Audit</h3><p>Pevně definovaný placený audit marketingu a podnikání.</p><ul><li>napojení dostupných dat,</li><li>důkazy a skóre jednotlivých oblastí,</li><li>mapa problémů, dat a aktiv,</li><li>odhad úniků peněz,</li><li>standardizované předání NEXUSU.</li></ul></article>
-            <article class="card package-card"><div class="package-number">03 / Strategie</div><h3>NEXUS Growth Blueprint</h3><p>Rozhodovací plán po dokončení auditu.</p><ul><li>priority podle dopadu a náročnosti,</li><li>rozpočet a očekávaný přínos,</li><li>závislosti a rizika,</li><li>plán prvních 90 dní,</li><li>KPI a pravidla zastavení.</li></ul></article>
-            <article class="card package-card"><div class="package-number">04 / Rychlý výsledek</div><h3>Revenue Rescue Sprint</h3><p>Třicetidenní mise zaměřená na konkrétní ztracené tržby.</p><ul><li>výběr jednoho kritického úniku,</li><li>návrh a nasazení opravy,</li><li>automatizovaný follow-up,</li><li>měření zachráněného obratu,</li><li>závěrečné doporučení škálování.</li></ul></article>
-            <article class="card package-card"><div class="package-number">05 / Měsíční služba</div><h3>Externí AI marketingové oddělení</h3><p>Průběžný cyklus analýzy, realizace a vyhodnocování.</p><ul><li>nepřetržitá kontrola SPIKE,</li><li>měsíční plán experimentů,</li><li>produkce, distribuce a automatizace,</li><li>ORBIT reporting,</li><li>rozhodovací schůzka a klientský cockpit.</li></ul></article>
-            <article class="card package-card"><div class="package-number">06 / Enterprise</div><h3>SAOS Enterprise Private</h3><p>Privátní podnikové nasazení se správou, integracemi a governance.</p><ul><li>vlastní data a oprávnění,</li><li>vlastní znalostní systém ROOT,</li><li>auditní log a schvalování,</li><li>integrační API,</li><li>školení a dlouhodobý servis.</li></ul></article>
-          </div>
-        </section>
-
-        <section class="section" id="experience">
-          <div class="section-head">
-            <div><div class="eyebrow">Website & Client Experience</div><h2>Co má vytvářet skutečný „wow“ efekt</h2></div>
-            <p>Ne další animace bez účelu. Návštěvník musí vidět živou ukázku práce systému a okamžitě pochopit hodnotu.</p>
-          </div>
-          <div class="experience-grid">
-            <article class="card experience-card"><div class="experience-index">01</div><h3>Živý SPIKE Mini Scan</h3><p>Okamžitá diagnostika bez čekání na obchodníka. Výsledek zobrazí skóre, hlavní rizika a doporučenou službu.</p></article>
-            <article class="card experience-card"><div class="experience-index">02</div><h3>Demonstrační Client Cockpit</h3><p>Ukázková firma s problémy, experimenty, schváleními, náklady a výsledky. Vždy jasně označená jako demonstrační data.</p></article>
-            <article class="card experience-card"><div class="experience-index">03</div><h3>Simulátor Growth Twin</h3><p>Návštěvník změní rozpočet, cenu nebo kapacitu a uvidí modelový dopad, rizika a potřebná data.</p></article>
-            <article class="card experience-card"><div class="experience-index">04</div><h3>Mapa úniků peněz</h3><p>Interaktivní cesta od reklamy přes web, obchod a opakovaný nákup. Ukáže, kde firmy nejčastěji přicházejí o peníze.</p></article>
-            <article class="card experience-card"><div class="experience-index">05</div><h3>Ukázka předání mezi rolemi</h3><p>Reálný příklad: nález SPIKEA → rozhodnutí NEXUSU → výstup PIXIE → distribuce WAVE → vyhodnocení ORBITA.</p></article>
-            <article class="card experience-card"><div class="experience-index">06</div><h3>Důkazní stopa ROOT</h3><p>U každého ukázkového tvrzení zobrazit zdroj, datum, míru jistoty a schválení. Tím se odlišíme od obyčejného chatu.</p></article>
-            <article class="card experience-card"><div class="experience-index">07</div><h3>Prvních 30 dní</h3><p>Přehledná osa spolupráce: přístupy a data, audit, priority, první oprava, první experiment a první vyhodnocení.</p></article>
-            <article class="card experience-card"><div class="experience-index">08</div><h3>Integrace a bezpečnost</h3><p>Konkrétní katalog napojení, práce s daty, oprávnění, schvalování, mazání dat a hranice automatických zásahů.</p></article>
-          </div>
-        </section>
-
-        <section class="section" id="architecture">
-          <div class="section-head">
-            <div><div class="eyebrow">Platform Architecture</div><h2>Technické vrstvy budoucí platformy</h2></div>
-            <p>První verze nemusí být obrovský vlastní software. Musí ale mít pevnou datovou strukturu a kontrolovatelné workflow.</p>
-          </div>
-          <div class="architecture" aria-label="Sedm technických vrstev SAOS">
-            <article class="architecture-card"><b>1</b><strong>Konektory</strong><small>Web, e-shop, reklama, CRM, účetnictví, dokumenty, podpora a sociální sítě.</small></article>
-            <article class="architecture-card"><b>2</b><strong>Datová vrstva</strong><small>Společná struktura zákazníků, produktů, kampaní, nákladů a výsledků.</small></article>
-            <article class="architecture-card"><b>3</b><strong>ROOT</strong><small>Znalosti, důkazy, verze, zdroje, oprávnění a firemní paměť.</small></article>
-            <article class="architecture-card"><b>4</b><strong>Agentní workflow</strong><small>Standardizované vstupy, výstupy a předávání práce mezi rolemi.</small></article>
-            <article class="architecture-card"><b>5</b><strong>Schvalování</strong><small>Řízení rizikových publikací, změn rozpočtu a automatických zásahů.</small></article>
-            <article class="architecture-card"><b>6</b><strong>ORBIT</strong><small>Měření experimentů, nákladů, zisku, kvality leadů a dlouhodobé hodnoty.</small></article>
-            <article class="architecture-card"><b>7</b><strong>Client Cockpit</strong><small>Jedno místo pro problémy, doporučení, úkoly, schválení a výsledky.</small></article>
-          </div>
-
-          <div class="handoff-box">
-            <div><div class="eyebrow">Povinný standard</div><h3>Každé předání musí být datová struktura, ne dlouhý volný prompt.</h3><p>Bez jednotného formátu nelze práci kontrolovat, automatizovat, porovnávat ani bezpečně předávat další roli.</p></div>
-            <div class="handoff-fields" aria-label="Povinná pole předání">
-              <span>Problém</span><span>Důkaz</span><span>Zdroj dat</span><span>Hodnocené období</span><span>Závažnost</span><span>Odhadovaný finanční dopad</span><span>Spolehlivost zjištění</span><span>Omezení</span><span>Doporučená akce</span><span>Vlastník</span><span>Termín</span><span>Nevyřešené otázky</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="priority">
-          <div class="section-head">
-            <div><div class="eyebrow">Prioritization</div><h2>Co stavět jako první</h2></div>
-            <p>Priorita není určena podle toho, co zní nejvíc futuristicky, ale podle prodejnosti, dostupnosti dat, rychlosti ověření a dopadu na klienta.</p>
-          </div>
-          <div class="priority-table">
-            <table class="table">
-              <thead><tr><th>Priorita</th><th>Produkty a úkoly</th><th>Proč teď</th><th>Výsledek fáze</th></tr></thead>
-              <tbody>
-                <tr><td><span class="priority-badge p0">P0 / Teď</span></td><td>SPIKE 360, SPIKE Always-On MVP, Revenue Rescue MVP, ORBIT Profit Dashboard, demonstrační Client Cockpit, standard předávání rolí</td><td>Nejrychlejší cesta k prodejnému a měřitelnému produktu.</td><td>Najít únik, opravit ho a prokázat finanční výsledek.</td></tr>
-                <tr><td><span class="priority-badge p1">P1 / Další</span></td><td>NEXUS Growth Blueprint, Experiment Factory, Customer Voice Intelligence, AI Visibility Radar, ROOT Evidence Graph</td><td>Rozšiřují službu z jednorázové opravy na průběžný růstový systém.</td><td>Opakovatelný měsíční cyklus analýzy, realizace a učení.</td></tr>
-                <tr><td><span class="priority-badge p2">P2 / Později</span></td><td>Growth Twin v plném rozsahu, AI Trust Layer, oborové workflow balíčky, Enterprise Private, integrační API</td><td>Vyžadují stabilní jádro, více klientských dat a ověřené procesy.</td><td>Škálovatelná platforma pro více typů firem a větší podniky.</td></tr>
-                <tr><td><span class="priority-badge p3">P3 / Výzkum</span></td><td>Anonymizovaný benchmarking, marketplace workflow, prediktivní modely napříč klienty, licencování SAOS třetím stranám</td><td>Mají vysoký potenciál, ale také vysoké nároky na data, právní rámec a počet uživatelů.</td><td>Nové datové a licenční obchodní modely.</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="section" id="roadmap">
-          <div class="section-head">
-            <div><div class="eyebrow">12-Month Roadmap</div><h2>Doporučené pořadí vývoje</h2></div>
-            <p>Roadmapa je orientační. Každá další fáze se spouští až po ověření předchozí fáze u skutečných klientů.</p>
-          </div>
-          <div class="roadmap">
-            <article class="roadmap-step"><div class="roadmap-time">0–30 dní</div><h3>Zabalit a ukázat</h3><ul><li>sjednotit veřejnou nabídku,</li><li>definovat datové výstupy sedmi rolí,</li><li>vytvořit SPIKE Mini Scan,</li><li>připravit demo Client Cockpitu,</li><li>zabalit SPIKE 360 jako přesný produkt.</li></ul></article>
-            <article class="roadmap-step"><div class="roadmap-time">31–90 dní</div><h3>Ověřit na pilotech</h3><ul><li>získat tři pilotní firmy,</li><li>napojit nejdůležitější datové zdroje,</li><li>spustit ROOT MVP a ORBIT dashboard,</li><li>zavést schvalování přes MAX,</li><li>dokončit první Revenue Rescue cyklus.</li></ul></article>
-            <article class="roadmap-step"><div class="roadmap-time">3–6 měsíců</div><h3>Rozšířit inteligenci</h3><ul><li>Experiment Factory,</li><li>Customer Voice Intelligence,</li><li>AI Visibility Radar,</li><li>první oborové workflow balíčky,</li><li>měsíční externí AI oddělení.</li></ul></article>
-            <article class="roadmap-step"><div class="roadmap-time">6–12 měsíců</div><h3>Budovat platformu</h3><ul><li>Growth Twin a scénářový simulátor,</li><li>privátní klientské instance,</li><li>partnerské integrace a API,</li><li>AI Trust Layer,</li><li>ověření licenčního a enterprise modelu.</li></ul></article>
-          </div>
-        </section>
-
-        <section class="section" id="idea-template">
-          <div class="section-head">
-            <div><div class="eyebrow">Idea Governance</div><h2>Jak evidovat každý další nápad</h2></div>
-            <p>Budoucí nápady nesmí zůstat jako neurčitý seznam. Každý nový návrh musí mít stejné minimum informací.</p>
-          </div>
-          <div class="idea-template">
-            <article class="future-note"><h3>Pravidlo zařazení</h3><p>Nápad se zařadí do vývoje až ve chvíli, kdy má jasně pojmenovaný problém klienta, dostupná vstupní data, měřitelný výsledek, vlastníka, minimální testovatelnou verzi a rozhodovací kritéria.</p><p><strong>Bez těchto údajů zůstává pouze ve výzkumu.</strong></p></article>
-            <div class="template-fields">
-              <div class="template-field"><b>Název</b>Krátký pracovní název produktu nebo funkce</div>
-              <div class="template-field"><b>Problém</b>Jakou konkrétní ztrátu nebo potřebu klienta řeší</div>
-              <div class="template-field"><b>Cílový klient</b>Živnostník, e-shop, B2B, lokální firma nebo enterprise</div>
-              <div class="template-field"><b>Vstupní data</b>Co systém musí získat a odkud</div>
-              <div class="template-field"><b>Výstup</b>Jaký dokument, akce, dashboard nebo rozhodnutí vznikne</div>
-              <div class="template-field"><b>Metrika úspěchu</b>Jak bude prokázán přínos</div>
-              <div class="template-field"><b>Role SAOS</b>Kdo analyzuje, rozhoduje, vyrábí, distribuuje a měří</div>
-              <div class="template-field"><b>MVP</b>Nejmenší verze ověřitelná u jednoho klienta</div>
-              <div class="template-field"><b>Rizika</b>Data, právo, bezpečnost, kvalita a závislosti</div>
-              <div class="template-field"><b>Priorita</b>P0, P1, P2 nebo P3</div>
-              <div class="template-field"><b>Vlastník</b>Jedna odpovědná role nebo člověk</div>
-              <div class="template-field"><b>Rozhodovací brána</b>Podmínka pokračování, přepracování nebo zastavení</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="final-focus">
-            <div class="eyebrow" style="color:#fff3ea">Doporučený první produktový celek</div>
-            <h2>SPIKE 360 + Revenue Rescue + ORBIT Profit Dashboard</h2>
-            <p>Nejdřív najdeme, kde firma ztrácí peníze. Potom vybereme největší příležitost, provedeme konkrétní opravu a změříme zachráněné nebo nově vytvořené peníze. To je srozumitelné, prodejné a prokazatelné.</p>
-            <div class="focus-flow"><span>Najít únik</span><span>Doložit důkaz</span><span>Stanovit prioritu</span><span>Provést opravu</span><span>Změřit zisk</span><span>Uložit poučení do ROOTU</span></div>
-          </div>
-        </section>
-      </div>
-    </main>
+      <section class="section"><div class="final"><div class="eyebrow">Doporučený první fokus</div><h2>SPIKE 360 + Revenue Rescue + ORBIT Profit Dashboard + Client Cockpit</h2><p>Tohle je nejkratší cesta od rozpracované vize k produktu, který lze reálně nabídnout, dodat, změřit a následně průběžně optimalizovat.</p><ul><li>SPIKE najde problémy a úniky,</li><li>Revenue Rescue opraví největší ztráty,</li><li>ORBIT prokáže ekonomický dopad,</li><li>Client Cockpit ukáže klientovi celý průběh.</li></ul></div></section>
+    </div></main>
   </div>
 </div>
-<div class="toast" data-toast>Zkopírováno</div>
-<script src="../js/app.js"></script>
+<div class="toast" data-toast>Zkopírováno</div><script src="../js/app.js"></script>
 </body>
 </html>
