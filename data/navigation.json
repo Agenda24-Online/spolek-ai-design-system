@@ -22,10 +22,22 @@
     "href": "brand/",
     "group": "Hlavní",
     "children": [
-      { "label": "Barvy", "href": "colors/" },
-      { "label": "Typografie", "href": "typography/" },
-      { "label": "Avataři", "href": "avatars/" },
-      { "label": "Motion", "href": "motion/" }
+      {
+        "label": "Barvy",
+        "href": "colors/"
+      },
+      {
+        "label": "Typografie",
+        "href": "typography/"
+      },
+      {
+        "label": "Avataři",
+        "href": "avatars/"
+      },
+      {
+        "label": "Motion",
+        "href": "motion/"
+      }
     ]
   },
   {
@@ -33,8 +45,14 @@
     "href": "design-system/",
     "group": "Hlavní",
     "children": [
-      { "label": "Design tokeny", "href": "design-tokens/" },
-      { "label": "UI komponenty", "href": "ui-components/" },
+      {
+        "label": "Design tokeny",
+        "href": "design-tokens/"
+      },
+      {
+        "label": "UI komponenty",
+        "href": "ui-components/"
+      },
       {
         "label": "Homepage webu",
         "href": "web-homepage/",
@@ -94,10 +112,26 @@
     "href": "business-os/",
     "group": "Hlavní",
     "children": [
-      { "label": "Business model", "href": "business-model/" },
-      { "label": "Workflow", "href": "workflow/" },
-      { "label": "Mapa firmy", "href": "company-map/" }
+      {
+        "label": "Business model",
+        "href": "business-model/"
+      },
+      {
+        "label": "Workflow",
+        "href": "workflow/"
+      },
+      {
+        "label": "Mapa firmy",
+        "href": "company-map/"
+      }
     ]
+  },
+  {
+    "label": "Produkty a ceník",
+    "href": "products/",
+    "group": "Hlavní",
+    "keywords": "produkty ceník ceny balíčky SPIKE Mini Scan Growth Foundation Revenue Rescue AI Growth AI Partner AI Department",
+    "children": []
   },
   {
     "label": "Marketing",
@@ -116,9 +150,24 @@
       }
     ]
   },
-  { "label": "Knowledge Base", "href": "knowledge-base/", "group": "Hlavní", "children": [] },
-  { "label": "Assets Library", "href": "assets-library/", "group": "Hlavní", "children": [] },
-  { "label": "Decisions", "href": "decisions/", "group": "Hlavní", "children": [] },
+  {
+    "label": "Knowledge Base",
+    "href": "knowledge-base/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Assets Library",
+    "href": "assets-library/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Decisions",
+    "href": "decisions/",
+    "group": "Hlavní",
+    "children": []
+  },
   {
     "label": "Budoucí nápady",
     "href": "future-ideas/",
@@ -137,6 +186,16 @@
       }
     ]
   },
-  { "label": "Changelog", "href": "changelog/", "group": "Hlavní", "children": [] },
-  { "label": "Laboratoř", "href": "laboratory/", "group": "Hlavní", "children": [] }
+  {
+    "label": "Changelog",
+    "href": "changelog/",
+    "group": "Hlavní",
+    "children": []
+  },
+  {
+    "label": "Laboratoř",
+    "href": "laboratory/",
+    "group": "Hlavní",
+    "children": []
+  }
 ]
